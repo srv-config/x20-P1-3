@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2010-2024 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Updating values display requires editing LegendaryWeaponSetOption.txt on client side (Lang.mpr)
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ### LegendaryWeaponSetOption::Weapon/Shield/FairyShield/LancerShield::Option ###
+//	Number: Option number, 0-4, 255 is used for option for option that always appears
+//	Name: Option name
+//	FormulaID: The ID of formula of option value, references to FormulaData.xml, ExcellentOption section
+//	Unk1: 
+//	Unk2: 
+//
+// STRICTLY NO COMMENTS INSIDE TAGS 
+-->
+
+<LegendaryWeaponSetOption>
+	<Weapon>
+		<Option Number="255" Name="Increase excellent damage rate by %d%%" FormulaID="11" Unk1="0" Unk2="0" />
+		<Option Number="0" Name="Increase attack (magic) speed by %d" FormulaID="12" Unk1="0" Unk2="0" />
+		<Option Number="1" Name="Gain (Life/8) when killing a monster" FormulaID="13" Unk1="3" Unk2="0" />
+		<Option Number="2" Name="Gain (Mana/8) when killing a monster" FormulaID="14" Unk1="3" Unk2="0" />
+		<Option Number="3" Name="%s increases by %.1f per 20 levels" FormulaID="15" Unk1="2" Unk2="1" />
+		<Option Number="4" Name="Increase %s by %d" FormulaID="16" Unk1="1" Unk2="1" />
+	</Weapon>
+	<Shield>
+		<Option Number="255" Name="%s increases by %.1f per 20 levels" FormulaID="17" Unk1="2" Unk2="2" />
+		<Option Number="0" Name="Reflect %d%% of damage" FormulaID="18" Unk1="0" Unk2="0" />
+		<Option Number="1" Name="Increase defense success rate by %d%%" FormulaID="19" Unk1="0" Unk2="3" />
+		<Option Number="2" Name="Increase maximum life by %d" FormulaID="20" Unk1="0" Unk2="0" />
+		<Option Number="3" Name="Increase maximum mana by %d" FormulaID="21" Unk1="0" Unk2="0" />
+		<Option Number="4" Name="Reduce damage by %d" FormulaID="22" Unk1="0" Unk2="0" />
+	</Shield>
+	<FairyShield>
+		<Option Number="255" Name="Improve attribute defense enhancement by %d%%" FormulaID="23" Unk1="0" Unk2="0" />
+		<Option Number="0" Name="Reflect %d%% of damage" FormulaID="18" Unk1="0" Unk2="0" />
+		<Option Number="1" Name="Increase defense success rate by %d%%" FormulaID="19" Unk1="0" Unk2="3" />
+		<Option Number="2" Name="Increase maximum life by %d" FormulaID="20" Unk1="0" Unk2="0" />
+		<Option Number="3" Name="Increase maximum mana by %d" FormulaID="21" Unk1="0" Unk2="0" />
+		<Option Number="4" Name="Reduce damage by %d" FormulaID="22" Unk1="0" Unk2="0" />
+	</FairyShield>
+	<LancerShield>
+		<Option Number="255" Name="%s increases by %.1f per 20 levels" FormulaID="17" Unk1="2" Unk2="2" />
+		<Option Number="0" Name="Reflect %d%% of damage" FormulaID="18" Unk1="0" Unk2="0" />
+		<Option Number="1" Name="Increase defense success rate by %d%%" FormulaID="19" Unk1="0" Unk2="3" />
+		<Option Number="2" Name="Increase maximum life by %d" FormulaID="20" Unk1="0" Unk2="0" />
+		<Option Number="3" Name="Increase maximum mana by %d" FormulaID="21" Unk1="0" Unk2="0" />
+		<Option Number="4" Name="Increase obsidian effect by %d" FormulaID="24" Unk1="0" Unk2="0" />
+	</LancerShield>
+</LegendaryWeaponSetOption>

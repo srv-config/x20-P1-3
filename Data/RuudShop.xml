@@ -144,6 +144,13 @@
 		<Item Cat="20" Index="253" Level="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" Element="0" Duration="0" Price="50000" /> <!-- Leviathan's Seal -->
 		<Item Cat="20" Index="257" Level="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" Element="0" Duration="0" Price="25000" /> <!-- Verdant Frame -->
 		<Item Cat="12" Index="97" Level="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" Element="0" Duration="0" Price="100000" /> <!-- Lightning Anvil -->
+		<Item Cat="20" Index="262" Level="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" Element="0" Duration="0" Price="150000" /> <!-- Temple Guard Moru -->
+		<Item Cat="20" Index="263" Level="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" Element="0" Duration="0" Price="75000" /> <!-- Soul of the Temple Guard -->
+		<Item Cat="20" Index="279" Level="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" Element="0" Duration="0" Price="150000" /> <!-- Temple Guard Moru (Wrath) -->
+		<Item Cat="20" Index="280" Level="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" Element="0" Duration="0" Price="150000" /> <!-- Temple Guard Moru (Faith) -->
+		<Item Cat="20" Index="281" Level="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" Element="0" Duration="0" Price="150000" /> <!-- Temple Guard Moru (Wizard) -->
+		<Item Cat="20" Index="282" Level="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" Element="0" Duration="0" Price="150000" /> <!-- Temple Guard Moru (Magic) -->
+		<Item Cat="20" Index="283" Level="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" Element="0" Duration="0" Price="150000" /> <!-- Temple Guard Moru (White Wizard) -->
 	</Character>
 	<Character Class="0" Name="Dark Wizard">
 		<Item Cat="13" Index="359" Level="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" Element="0" Duration="0" Price="50000" /> <!-- Blood Angel Armor of Sealed Transcendence -->
@@ -309,8 +316,8 @@
 		<Item Cat="20" Index="241" Level="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" Element="0" Duration="0" Price="50000" /> <!-- Blood Angel Armor of Sealed Element -->
 		<Item Cat="20" Index="242" Level="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" Element="0" Duration="0" Price="50000" /> <!-- Blood Angel Pants of Sealed Element -->
 		<Item Cat="20" Index="243" Level="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" Element="0" Duration="0" Price="50000" /> <!-- Blood Angel Boots of Sealed Element -->
-		<Item Cat="15" Index="66" Level="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" Element="0" Duration="0" Price="1000" /> <!-- Softness: Countless Weapon Lawbook -->
-		<Item Cat="5" Index="114" Level="0" Skill="0" Luck="-1" Option="0" Exc="-10" SetItem="0" SocketCount="0" Element="0" Duration="0" Price="100000" /> <!-- Blood Angel Wand -->
+		<Item Cat="15" Index="66" Level="0" Skill="0" Luck="0" Option="0" Exc="-1" SetItem="0" SocketCount="0" Element="0" Duration="0" Price="1000" /> <!-- Softness: Countless Weapon Law Book -->
+		<Item Cat="5" Index="116" Level="0" Skill="0" Luck="-1" Option="0" Exc="-10" SetItem="0" SocketCount="0" Element="0" Duration="0" Price="100000" /> <!-- Blood Angel Wand -->
 		<Item Cat="5" Index="133" Level="0" Skill="0" Luck="-1" Option="0" Exc="-10" SetItem="0" SocketCount="0" Element="0" Duration="0" Price="100000" /> <!-- Blood Angel Elixir -->	
 	</Character>
 </RuudShop>

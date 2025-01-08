@@ -29,11 +29,11 @@
 //
 //	Value: Value of the option
 //	FormulaID: ID of formula from FormulaData.xml - formula is not in use at the moment
-//	ItemKindA_1: Item KindA the option applies to (ItemList.xml), -1 if not applies
-//	ItemKindA_2: Item KindA the option applies to (ItemList.xml), -1 if not applies
-//	ItemKindA_3: Item KindA the option applies to (ItemList.xml), -1 if not applies
-//	ItemKindA_4: Item KindA the option applies to (ItemList.xml), -1 if not applies
-//	ItemKindA_5: Item KindA the option applies to (ItemList.xml), -1 if not applies
+//	ItemKindA_1: KindA of item the option applies to, -1 if not applies
+//	ItemKindA_2: KindA of item the option applies to, -1 if not applies
+//	ItemKindA_3: KindA of item the option applies to, -1 if not applies
+//	ItemKindA_4: KindA of item the option applies to, -1 if not applies
+//	ItemKindA_5: KindA of item the option applies to, -1 if not applies
 //	Name: Name of the option (used for in-file description purpose only)
 //
 // ### MasteryBonusOptions::OptionRate::Armors/Shields/FairyShields/LancerShields/Weapons::Option ###
