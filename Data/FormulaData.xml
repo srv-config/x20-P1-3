@@ -906,6 +906,8 @@
 		<Formula ID="54" Data="250+(%d/20)+(%d/20)" /> <!-- Energy, Command -->
 		<Formula ID="55" Data="(%d+%d)*0+10" /> <!-- Command, Agility -->
 		<Formula ID="56" Data="(%d+%d)/3" /> <!-- Command, Agility -->
+		<Formula ID="56" Data="(%d+%d)/3" /> <!-- Command, Agility -->
+		<Formula ID="57" Data="1+((%d-23)/10)" /> <!-- Vitality -->
 	</Character>
 	<GuardianItem>
 		<Formula ID="0" Data="20+((9+%d)/2)^2" /> <!-- ItemLevel -->
