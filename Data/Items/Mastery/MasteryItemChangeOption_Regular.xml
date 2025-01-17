@@ -12,7 +12,7 @@
 //~~ Mysterious stone rates can operate in two modes, normal and event, see Common.ini::MiscEvents::UseMysteriousStoneEventRate
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //
-// ### MysteriousStone::Armors::OptionRand::CommonItem|PeriodItem::Option ###
+// ### MasteryItemChangeOption::Armors::OptionRand::CommonItem|PeriodItem::Option ###
 //	ExcX: Where X is 1-9, excellent option to apply for upon selection of specific entry, see ExcellentOptions.xml::ExcellentOptions::Common::Number for available option values
 //	Set: Set option to apply
 //		~ 1: All Stats +7
@@ -34,7 +34,7 @@
 //~~ Sum of rates must be equal to 1000000, for best results rates should be configured from highest to lowest
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //
-// ### MysteriousStone::Armors::BonusOptionRand::CommonItem|PeriodItem::Option ###
+// ### MasteryItemChangeOption::Armors::BonusOptionRand::CommonItem|PeriodItem::Option ###
 //	MasteryBonus: 
 //	-1: No option
 //	1, 2, 3: Index of option from MasteryBonusOption.xml::MasteryBonusOptions::OptionList::Option::Index
@@ -50,10 +50,10 @@
 //~~ As possible maximum options are considered items with "All Stats +15 +Luck" or "All Stats +15 +Luck +number of excellent options set within MaxExcOption attribute"
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //
-// ### MysteriousStone::Shields|FairyShields|LancerShields|Weapons ###
+// ### MasteryItemChangeOption::Shields|FairyShields|LancerShields|Weapons ###
 //	MaxExcOption: Number of options to consider item as item that achieved maximum number of options coming from mysterious stone, Luck option must present as well
 //
-// ### MysteriousStone::Shields|FairyShields|LancerShields|Weapons::OptionRand::CommonItem|PeriodItem::Option ###
+// ### MasteryItemChangeOption::Shields|FairyShields|LancerShields|Weapons::OptionRand::CommonItem|PeriodItem::Option ###
 //	ExcX: Where X is 1-9, excellent option to apply for upon selection of specific entry, see ExcellentOptions.xml::ExcellentOptions::Common::Number for available option values
 //
 // MasteryBonusOption:
@@ -68,7 +68,7 @@
 //~~ Sum of rates must be equal to 1000000, for best results rates should be configured from highest to lowest
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //
-// ### MysteriousStone::Armors::BonusOptionRand::CommonItem|PeriodItem::Option ###
+// ### MasteryItemChangeOption::Armors::BonusOptionRand::CommonItem|PeriodItem::Option ###
 //	MasteryBonus: 
 //	-1: No option
 //	1, 2, 3: Index of option from MasteryBonusOption.xml::MasteryBonusOptions::OptionList::Option::Index
@@ -87,7 +87,7 @@
 // STRICTLY NO COMMENTS INSIDE TAGS
 -->
 
-<MysteriousStone>
+<MasteryItemChangeOption>
 	<Armors>
 		<OptionRand>
 			<CommonItem> <!-- Maximum 50 entries -->
@@ -386,4 +386,4 @@
 			</PeriodItem>
 		</BonusOptionRand>
 	</Weapons>
-</MysteriousStone>
+</MasteryItemChangeOption>

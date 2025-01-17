@@ -12,7 +12,7 @@
 //~~ Updating values display requires editing MasteryItemBonusOption.txt on client side (Lang.mpr)
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //
-// ### MasteryBonusOptions::OptionList::Option ###
+// ### MasteryItemBonusOption::OptionList::Option ###
 //	Number: Option number
 //		1: Damage Decrease
 //		2: Increase all stats
@@ -36,7 +36,7 @@
 //	ItemKindA_5: KindA of item the option applies to, -1 if not applies
 //	Name: Name of the option (used for in-file description purpose only)
 //
-// ### MasteryBonusOptions::OptionRate::Armors/Shields/FairyShields/LancerShields/Weapons::Option ###
+// ### MasteryItemBonusOption::OptionRate::Armors/Shields/FairyShields/LancerShields/Weapons::Option ###
 //	Number: Option value number, refers to Number of option from OptionList section
 //	Index: Option value index, unique per option number, 1-3
 //	Rate: Chance rate of getting specified option value, n/1000000
@@ -47,7 +47,7 @@
 // STRICTLY NO COMMENTS INSIDE TAGS 
 -->
 
-<MasteryBonusOptions>
+<MasteryItemBonusOption>
 	<OptionList>
 	<!-- Damage Decrease -->							
 		<Option Number="1" Index="1" Operator="1" Value="25" FormulaID="-1" ItemKindA_1="15" ItemKindA_2="18" ItemKindA_3="27" ItemKindA_4="33" ItemKindA_5="-1" Name="Damage Decrease %d" />
@@ -86,4 +86,4 @@
 			<Option Number="2" Index="3" Rate="2180" />
 		</Weapons>
 	</OptionRate>
-</MasteryBonusOptions>
+</MasteryItemBonusOption>

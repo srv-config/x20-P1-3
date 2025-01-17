@@ -8,11 +8,11 @@
 // == File is a part of IGCN Group MuOnline Server files.
 // ============================================================
 //
-// ### MasteryExcOptions::Item ###
+// ### MasteryWeaponExcellentOption::Item ###
 //	KindA: KindA of item
 //	Cat: Category of item, see ItemList.xml
 //	Index: Index of item, see ItemList.xml
-//	ExcOption: Excellent option ID, usage: X;X;X;X;X;X;X;X;X, max 9 options, see IGC-ExcellentOption.xml for options IDs
+//	ExcOption: Excellent option ID, usage: X;X;X;X;X;X;X;X;X, max 9 options, see ExcellentOption.xml for options IDs
 //	BonusOption, Bonus option:
 //		-1: No Option
 //		1: Bonus Option 1
@@ -30,7 +30,7 @@
 // STRICTLY NO COMMENTS INSIDE TAGS 
 -->
 
-<MasteryExcOptions>
+<MasteryWeaponExcellentOption>
 <!-- Blood Angel Sword -->
 	<Item KindA="14" Cat="0" Index="42" ExcOption="0;3;-1;-1;-1;-1;-1;-1;-1" BonusOption="-1" Rate="40000" LuckRate="500000" SkillRate="1000000" />
 	<Item KindA="14" Cat="0" Index="42" ExcOption="0;3;-1;-1;-1;-1;-1;-1;-1" BonusOption="1" Rate="40000" LuckRate="500000" SkillRate="1000000" />
@@ -606,4 +606,4 @@
 	<Item KindA="14" Cat="5" Index="133" ExcOption="0;3;6;-1;-1;-1;-1;-1;-1" BonusOption="1" Rate="40000" LuckRate="500000" SkillRate="1000000" />
 	<Item KindA="14" Cat="5" Index="133" ExcOption="0;3;6;-1;-1;-1;-1;-1;-1" BonusOption="2" Rate="40000" LuckRate="500000" SkillRate="1000000" />
 	<Item KindA="14" Cat="5" Index="133" ExcOption="0;3;6;-1;-1;-1;-1;-1;-1" BonusOption="3" Rate="40000" LuckRate="500000" SkillRate="1000000" />
-</MasteryExcOptions>
+</MasteryWeaponExcellentOption>
