@@ -3,7 +3,7 @@
 // ============================================================
 // == INTERNATIONAL GAMING CENTER NETWORK
 // == www.igcn.mu
-// == (C) 2010-2024 IGC-Network (R)
+// == (C) 2010-2025 IGC-Network (R)
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // == File is a part of IGCN Group MuOnline Server files.
 // ============================================================
@@ -19,6 +19,9 @@
 //	Unk1: 
 //	Unk2: 
 //	Rate: Chance of getting specified option, used for drop purpose and options upgrade when converting item from mastery, n/10000
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ The rate should always be set greater than 0 for every option Number 1 to 4, otherwise game may "freeze"
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //
 // STRICTLY NO COMMENTS INSIDE TAGS 
 -->
@@ -30,7 +33,7 @@
 		<Option Number="1" Name="Obtains (Life/8) when monster is killed" FormulaID="13" Unk1="3" Unk2="0" Rate="5000" />
 		<Option Number="2" Name="Obtains (Mana/8) when monster is killed" FormulaID="14" Unk1="3" Unk2="0" Rate="5000" />
 		<Option Number="3" Name="%s increases by %.1f every 20Lv" FormulaID="15" Unk1="2" Unk2="1" Rate="5000" />
-		<Option Number="4" Name="Increase %s by %d" FormulaID="16" Unk1="1" Unk2="1" />
+		<Option Number="4" Name="Increase %s by %d" FormulaID="16" Unk1="1" Unk2="1" Rate="5000" />
 	</Weapon>
 	<Shield>
 		<Option Number="255" Name="%s increases by %.1f every 20Lv" FormulaID="17" Unk1="2" Unk2="2" Rate="0" />
