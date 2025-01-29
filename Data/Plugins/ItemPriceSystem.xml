@@ -3,7 +3,7 @@
 // ============================================================
 // == INTERNATIONAL GAMING CENTER NETWORK
 // == www.igcn.mu
-// == (C) 2023 IGC-Network (R)
+// == (C) 2010-2025 IGC-Network (R)
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // == File is a part of IGCN Group MuOnline Server files.
 // ============================================================
@@ -11,7 +11,7 @@
 //~~ Changes to the file must be reflected on game client side and encrypted to .bmd using ToolKit Lite or Premium "IGC File Enc/Dec (XML)" tool, \Data\Local\ItemPriceSystem.bmd
 //
 // ### ItemPriceSystem ###
-//	Password: 
+//	Password: A password used by ToolKit ServerInfo (XML) editor to encode the file, max 8 characters
 //
 // ### ItemPriceSystem::ItemSell ###
 //	Enable: Deactivates or activates item sell price override, 0/1
@@ -29,6 +29,10 @@
 //		~ 2: Zen
 //		~ 3: Ruud
 //	CoinValue: Value of selected coin type
+//	PriceMode: Method of calculating price for overlap items
+//		~ 0: Multiplies price by item durability for overlap items
+//		~ 1: Uses CoinValue as final price, regardless overlap item durability
+//
 //	SetOption: Is ancient item, 0/1
 //	SetTier: Tier of ancient item to check
 //		~ 0: No Tier
@@ -71,7 +75,7 @@
 	</ItemSell>
 	
 	<ItemBuy Enable="0">
-		<Item Cat="0" Index="14" ItemMinLevel="0" ItemMaxLevel="0" CoinType="1" CoinValue="160000"/>
+		<Item Cat="0" Index="14" ItemMinLevel="0" ItemMaxLevel="0" CoinType="1" CoinValue="160000" PriceMode="0" />
 	</ItemBuy>
 	
 	<Strings>
