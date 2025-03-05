@@ -88,6 +88,7 @@
 //		~ -1: Used for party and non-party drop
 //		~ 0: Used while not in party
 //		~ 1: Used for party only
+//
 //	DisplayName: Name of section, displayed within logs and used by ToolKit Premium editor
 //
 // ### ItemBag::DropSection::DropAllow ### - by setting lower class the higher one automatically is being allowed
@@ -157,6 +158,7 @@
 //		WingCore:
 //			-1: No Option
 //			-2: Random count of random options (based on rates from WingCoreOption.xml)
+//			-3;X: Specified count of random options, the 'X' defines count of wing core options, max 2 (options selection based on rates from WingCoreOption.xml)
 //
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //~~ Advanced config notes: The values -1, -2 and -3 are stored under Exc1 variable in ItemBagScript.lua, the options count (X) for -3 value is stored under Exc2 variable

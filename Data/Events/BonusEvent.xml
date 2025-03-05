@@ -23,6 +23,7 @@
 //		~ 6: Friday
 //		~ 7: Saturday
 //		~ -1: every day
+//
 //	StartHour: Start hour of the event, 0-23
 //	StartMinute: End minute of the event, 0-59
 //	EndHour: End hour of the event, 0-23

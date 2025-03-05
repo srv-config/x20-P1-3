@@ -13682,6 +13682,14 @@
 		</Spot>
 	</Map>
 	<Map Number="143" Name="Kardamahal Underground Temple">
+		<Spot Type="0" Description="NPC/Traps">
+			<!--Elite Zone Flag-->
+			<Spawn Index="838" Distance="0" StartX="26" StartY="48" Dir="1" />
+			<Spawn Index="838" Distance="0" StartX="216" StartY="60" Dir="1" />
+			<Spawn Index="838" Distance="0" StartX="46" StartY="126" Dir="1" />
+			<Spawn Index="838" Distance="0" StartX="236" StartY="132" Dir="1" />
+			<Spawn Index="838" Distance="0" StartX="237" StartY="198" Dir="1" />
+		</Spot>
 		<Spot Type="4" Description="Single Point Elemental Monsters">
 			<!--(963) Devil Sword [Lv.950]-->
 			<Spawn Index="963" Distance="2" StartX="148" StartY="58" Dir="1" Element="2" />
@@ -14104,6 +14112,39 @@
 			<Spawn Index="965" Distance="2" StartX="33" StartY="91" Dir="-1" Element="3" />
 			<Spawn Index="965" Distance="2" StartX="33" StartY="155" Dir="-1" Element="3" />
 			<Spawn Index="965" Distance="2" StartX="60" StartY="191" Dir="-1" Element="3" />
+			<!--(966) (Elite) Devil Sword [Lv.960]-->
+			<Spawn Index="966" Distance="2" StartX="15" StartY="67" Dir="2" Element="1" />
+			<Spawn Index="966" Distance="2" StartX="18" StartY="69" Dir="1" Element="1" />
+			<Spawn Index="966" Distance="2" StartX="67" StartY="144" Dir="6" Element="3" />
+			<Spawn Index="966" Distance="2" StartX="64" StartY="148" Dir="6" Element="3" />
+			<Spawn Index="966" Distance="2" StartX="225" StartY="211" Dir="2" Element="5" />
+			<Spawn Index="966" Distance="2" StartX="225" StartY="214" Dir="2" Element="5" />
+			<Spawn Index="966" Distance="2" StartX="229" StartY="149" Dir="1" Element="4" />
+			<Spawn Index="966" Distance="2" StartX="231" StartY="152" Dir="1" Element="4" />
+			<Spawn Index="966" Distance="2" StartX="200" StartY="66" Dir="2" Element="2" />
+			<Spawn Index="966" Distance="2" StartX="199" StartY="69" Dir="2" Element="2" />
+			<Spawn Index="966" Distance="2" StartX="196" StartY="64" Dir="2" Element="2" />
+			<Spawn Index="966" Distance="2" StartX="195" StartY="68" Dir="2" Element="2" />
+			<!--(967) (Elite) Devil Scythe [Lv.960]-->
+			<Spawn Index="967" Distance="2" StartX="15" StartY="63" Dir="2" Element="1" />
+			<Spawn Index="967" Distance="2" StartX="21" StartY="67" Dir="1" Element="1" />
+			<Spawn Index="967" Distance="2" StartX="64" StartY="143" Dir="6" Element="3" />
+			<Spawn Index="967" Distance="2" StartX="67" StartY="148" Dir="6" Element="3" />
+			<Spawn Index="967" Distance="2" StartX="228" StartY="211" Dir="2" Element="5" />
+			<Spawn Index="967" Distance="2" StartX="228" StartY="215" Dir="2" Element="5" />
+			<Spawn Index="967" Distance="2" StartX="225" StartY="150" Dir="1" Element="4" />
+			<Spawn Index="967" Distance="2" StartX="229" StartY="153" Dir="1" Element="4" />
+			<Spawn Index="967" Distance="2" StartX="198" StartY="65" Dir="2" Element="2" />
+			<Spawn Index="967" Distance="2" StartX="197" StartY="68" Dir="2" Element="2" />
+			<!--(968) (Elite) Devil Sorcerer [Lv.960]-->
+			<Spawn Index="968" Distance="2" StartX="18" StartY="63" Dir="-1" Element="1" />
+			<Spawn Index="968" Distance="2" StartX="21" StartY="66" Dir="1" Element="1" />
+			<Spawn Index="968" Distance="2" StartX="70" StartY="144" Dir="6" Element="3" />
+			<Spawn Index="968" Distance="2" StartX="70" StartY="149" Dir="6" Element="3" />
+			<Spawn Index="968" Distance="2" StartX="231" StartY="211" Dir="-1" Element="3" />
+			<Spawn Index="968" Distance="2" StartX="231" StartY="216" Dir="-1" Element="3" />
+			<Spawn Index="968" Distance="2" StartX="226" StartY="153" Dir="1" Element="4" />
+			<Spawn Index="968" Distance="2" StartX="228" StartY="155" Dir="1" Element="4" />
 		</Spot>
 	</Map>
 </MonsterSpawn>

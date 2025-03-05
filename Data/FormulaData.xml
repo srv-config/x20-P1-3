@@ -3,7 +3,7 @@
 // ============================================================
 // == INTERNATIONAL GAMING CENTER NETWORK
 // == www.igcn.mu
-// == (C) 2010-2024 IGC-Network (R)
+// == (C) 2010-2025 IGC-Network (R)
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // == File is a part of IGCN Group MuOnline Server files.
 // ============================================================
@@ -47,8 +47,33 @@
 // ### FormulaData::ExcellentOption::Formula ###
 //	ID: Next unique ID of formula, starts from 0
 //	Data: The formula data, no spaces
-//		ItemDropLevel: Item drop level from ItemList.xml
-//		PlayerLevel: Level of player
+//		~ 0-10: Used within ExcellentOptions.xml to calculate corresponding excellent option value
+//		~ 11-24: Used within KegendaryWeaponSetOption.xml to calculate corresponding legendary option value
+//		~ 25: Additional Damage Legendary green option, for items below level 10
+//		~ 26: Additional Damage Legendary green option, for items equal or above level 10
+//		~ 27: Additional Curse/Wizardry Damage Legendary green option, for items below level 10
+//		~ 28: Additional Curse/Wizardry Damage Legendary green option, for items equal or above level 10
+//		~ 29: Additional Defense Legendary green option, for items below level 10
+//		~ 30: Additional Defense Legendary green option, for items equal or above level 10
+//		~ 33-50: Used within LegendaryItemBonusOption.xml to calculate corresponding legendary bonus option value
+//		~ 51: Defense bonus value when wearing five pieces legendary set of level 10 or higher
+//		~ 52: Defense bonus value when wearing five pieces legendary set of level 11 or higher
+//		~ 53: Defense bonus value when wearing five pieces legendary set of level 12 or higher
+//		~ 54: Defense bonus value when wearing five pieces legendary set of level 13 or higher
+//		~ 55: Defense bonus value when wearing five pieces legendary set of level 14 or higher
+//		~ 56: Defense bonus value when wearing five pieces legendary set of level 15 or higher
+//		~ 57: Legendary weapon Attack Rate increase for items of level below level 10
+//		~ 58: Legendary weapon Attack Rate increase for items equal or above level 10
+//		~ 59: Legendary weapon min/max damage increase for items of level below level 10
+//		~ 60: Legendary weapon min/max damage increase for items equal or above level 10
+//		~ 61: Legendary Curse/Wizardry damage increase for items of level below level 10
+//		~ 62: Legendary Curse/Wizardry damage increase for items equal or above level 10
+//		~ 63: Legendary set item defense value added per level for item below level 10
+//		~ 64: Legendary set item defense value added per level for item equal or above level 10
+//		~ 69: Legendary excellent item defense added per level for item below level 10
+//		~ 70: Legendary excellent item defense added per level for item equal or above level 10
+//		~ 71: Legendary excellent item base defense value at level 0
+//		~ 72: Legendary set item base defense value at level 0
 //
 // ### FormulaData::SetAddStatOption::Formula ###
 //	ID: Next unique ID of formula, starts from 0
@@ -241,6 +266,68 @@
 		<Formula ID="8" Data="((%d/200)+((%d*3)^1.1))" /> <!-- ItemDropLevel, PlayerLevel -->
 		<Formula ID="9" Data="(%d*0.05)^1.4" /> <!-- ItemDropLevel -->
 		<Formula ID="10" Data="(%d-130)/10*15" /> <!-- ItemDropLevel -->
+		<Formula ID="11" Data="10" />
+		<Formula ID="12" Data="7" />
+		<Formula ID="13" Data="1" />
+		<Formula ID="14" Data="1" />
+		<Formula ID="15" Data="(%d/100)*(%d/20)" /> <!-- ItemDropLevel, PlayerLevel -->
+		<Formula ID="16" Data="(%d/3.5)" /> <!-- ItemDropLevel -->
+		<Formula ID="17" Data="(%d/100)*(%d/20)" /> <!-- ItemDropLevel, PlayerLevel -->
+		<Formula ID="18" Data="5" />
+		<Formula ID="19" Data="10" />
+		<Formula ID="20" Data="(%d*1.1)" /> <!-- ItemDropLevel -->
+		<Formula ID="21" Data="(%d*1.1)" /> <!-- ItemDropLevel -->
+		<Formula ID="22" Data="(%d*0.3)" /> <!-- ItemDropLevel -->
+		<Formula ID="23" Data="(%d*0.05)^1.4" /> <!-- ItemDropLevel -->
+		<Formula ID="24" Data="(%d-130)/10*15" /> <!-- ItemDropLevel -->
+		<Formula ID="25" Data="(((%d*5)+(%d+1))*2)" /> <!-- ItemLevel, LegendaryItemStage" -->
+		<Formula ID="26" Data="((%d+%d)*0)" /> <!-- ItemLevel, LegendaryItemStage" -->
+		<Formula ID="27" Data="(((%d*5)+(%d+1))*2)" /> <!-- ItemLevel, LegendaryItemStage" -->
+		<Formula ID="28" Data="((%d+%d)*0)" /> <!-- ItemLevel, LegendaryItemStage" -->
+		<Formula ID="29" Data="((%d*5)+(%d+1))" /> <!-- ItemLevel, LegendaryItemStage" -->
+		<Formula ID="30" Data="((%d+%d)*0)" /> <!-- ItemLevel, LegendaryItemStage" -->
+		<Formula ID="31" Data="" />
+		<Formula ID="32" Data="" />
+		<Formula ID="33" Data="(75)+(%d*0)" /> <!-- 1 -->
+		<Formula ID="34" Data="(50)+(%d*0)" /> <!-- 1 -->
+		<Formula ID="35" Data="(15)+(%d*0)" /> <!-- 1 -->
+		<Formula ID="36" Data="(150)+(%d*0)" /> <!-- 1 -->
+		<Formula ID="37" Data="(100)+(%d*0)" /> <!-- 1 -->
+		<Formula ID="38" Data="(50)+(%d*0)" /> <!-- 1 -->
+		<Formula ID="39" Data="(150)+(%d*0)" /> <!-- 1 -->
+		<Formula ID="40" Data="(100)+(%d*0)" /> <!-- 1 -->
+		<Formula ID="41" Data="(30)+(%d*0)" /> <!-- 1 -->
+		<Formula ID="42" Data="(300)+(%d*0)" /> <!-- 1 -->
+		<Formula ID="43" Data="(200)+(%d*0)" /> <!-- 1 -->
+		<Formula ID="44" Data="(100)+(%d*0)" /> <!-- 1 -->
+		<Formula ID="45" Data="(225)+(%d*0)" /> <!-- 1 -->
+		<Formula ID="46" Data="(150)+(%d*0)" /> <!-- 1 -->
+		<Formula ID="47" Data="(45)+(%d*0)" /> <!-- 1 -->
+		<Formula ID="48" Data="(450)+(%d*0)" /> <!-- 1 -->
+		<Formula ID="49" Data="(300)+(%d*0)" /> <!-- 1 -->
+		<Formula ID="50" Data="(150)+(%d*0)" /> <!-- 1 -->
+		<Formula ID="51" Data="350" />
+		<Formula ID="52" Data="400" />
+		<Formula ID="53" Data="450" />
+		<Formula ID="54" Data="500" />
+		<Formula ID="55" Data="550" />
+		<Formula ID="56" Data="600" />
+		<Formula ID="57" Data="(%d*10+(%d*0))" /> <!-- ItemLevel, ItemLevel -->
+		<Formula ID="58" Data="((((%d-9)*(%d-8))/2)*3)" /> <!-- ItemLevel, ItemLevel -->
+		<Formula ID="59" Data="(%d*2+(%d*0))" /> <!-- ItemLevel, ItemLevel -->
+		<Formula ID="60" Data="(((%d-9)*(%d-8))/2)+((%d+%d)*0)" /> <!-- ItemLevel, ItemLevel, ItemLevel, ItemLevel -->
+		<Formula ID="61" Data="((%d*2+(%d*0))*2)" /> <!-- ItemLevel, ItemLevel -->
+		<Formula ID="62" Data="(((((%d-9)*(%d-8))/2)+((%d+%d)*0))*2)" /> <!-- ItemLevel, ItemLevel, ItemLevel, ItemLevel -->
+		<Formula ID="63" Data="(%d*2+(%d*0))" /> <!-- ItemLevel, ItemLevel -->
+		<Formula ID="64" Data="(((%d-9)*(%d-8))/2)+((%d+%d)*0)" /> <!-- ItemLevel, ItemLevel, ItemLevel, ItemLevel -->
+		<Formula ID="65" Data="(%d*1+(%d*0))" /> <!-- ItemLevel, ItemLevel -->
+		<Formula ID="66" Data="(((%d-9)*(%d-8))/2)+((%d+%d)*0)" /> <!-- ItemLevel, ItemLevel, ItemLevel, ItemLevel -->
+		<Formula ID="67" Data="(%d*3+(%d*0))" /> <!-- ItemLevel, ItemLevel -->
+		<Formula ID="68" Data="(((%d-9)*(%d-8))/2)" /> <!-- ItemLevel, ItemLevel -->
+		<Formula ID="69" Data="(%d*2+(%d*0))" /> <!-- ItemLevel, ItemLevel -->
+		<Formula ID="70" Data="(((%d-9)*(%d-8))/2)+((%d+%d)*0)" /> <!-- ItemLevel, ItemLevel, ItemLevel, ItemLevel -->
+		<Formula ID="71" Data="(%d+25)" /> <!-- ItemDefense -->
+		<Formula ID="72" Data="((%d+25)+57)+((((%d-1)*20)/20*26))" /> <!-- ItemDefense, LegendaryGrade -->
 	</ExcellentOption>
 	<SetAddStatOption>
 		<Formula ID="0"	Data="%d/10" /> <!-- ItemLevel -->
@@ -255,6 +342,8 @@
 		<Formula ID="9"	Data="%d/5" /> <!-- ItemLevel -->
 		<Formula ID="10" Data="%d/20" /> <!-- ItemLevel -->
 		<Formula ID="11" Data="%d/10" /> <!-- ItemLevel -->
+		<Formula ID="12" Data="(%d*0)+7" /> <!-- ItemLevel -->
+		<Formula ID="13" Data="(%d*0)+15" /> <!-- ItemLevel -->
 	</SetAddStatOption>
 	<SkillTree>
 		<Formula ID="0" Data="0" /> <!-- empty -->
@@ -701,6 +790,40 @@
 		<Formula ID="115" Data="(((%d*2.2)^1)+22)" /> <!-- ItemLevel -->
 		<Formula ID="116" Data="((((%d*1.8)^1.48)+56)/1.1)" /> <!-- ItemLevel -->
 		<Formula ID="117" Data="(((%d*2)^1)+21)" /> <!-- ItemLevel -->
+		<Formula ID="118" Data="(80.5+(%d*1)/2)" /> <!-- ItemLevel -->
+		<Formula ID="119" Data="(38+(%d*1)/3)" /> <!-- ItemLevel -->
+		<Formula ID="120" Data="(631+(%d*6.78))" /> <!-- ItemLevel -->
+		<Formula ID="121" Data="(253+(%d*2.63))" /> <!-- ItemLevel -->
+		<Formula ID="122" Data="(176+(%d*2.65))" /> <!-- ItemLevel -->
+		<Formula ID="123" Data="(176+(%d*2.65))" /> <!-- ItemLevel -->
+		<Formula ID="124" Data="(57+(%d*1.2))" /> <!-- ItemLevel -->
+		<Formula ID="125" Data="(250+(%d*2.53))" /> <!-- ItemLevel -->
+		<Formula ID="126" Data="(230+(%d*2.37))" /> <!-- ItemLevel -->
+		<Formula ID="127" Data="(185+(%d*2.65))" /> <!-- ItemLevel -->
+		<Formula ID="128" Data="(65+(%d*1.5))" /> <!-- ItemLevel -->
+		<Formula ID="129" Data="(249+(%d*2.39))" /> <!-- ItemLevel -->
+		<Formula ID="130" Data="(239+(%d*2.33))" /> <!-- ItemLevel -->
+		<Formula ID="131" Data="(56+(%d*1.2))" /> <!-- ItemLevel -->
+		<Formula ID="132" Data="(130.5+(%d*1)/2)" /> <!-- ItemLevel -->
+		<Formula ID="133" Data="(117+(%d*2.5))" /> <!-- ItemLevel -->
+		<Formula ID="134" Data="(55+(%d*1))" /> <!-- ItemLevel -->
+		<Formula ID="135" Data="(170+(%d*1.39))" /> <!-- ItemLevel -->
+		<Formula ID="136" Data="(51+(%d*1))" /> <!-- ItemLevel -->
+		<Formula ID="137" Data="500" />
+		<Formula ID="138" Data="500" />
+		<Formula ID="139" Data="300" />
+		<Formula ID="140" Data="400" />
+		<Formula ID="141" Data="(20+(%d*1.5))" /> <!-- ItemLevel -->
+		<Formula ID="142" Data="500" />
+		<Formula ID="143" Data="500" />
+		<Formula ID="144" Data="300" />
+		<Formula ID="145" Data="400" />
+		<Formula ID="146" Data="(20+(%d*1.5))" /> <!-- ItemLevel -->
+		<Formula ID="147" Data="150" />
+		<Formula ID="148" Data="120" />
+		<Formula ID="149" Data="100" />
+		<Formula ID="150" Data="300" />
+		<Formula ID="151" Data="240" />
 	</SetOption>
 	<Wing4thDamage>
 		<Formula ID="0" Data="100+(%d^1.2*11.8)" /> <!-- WingsLevel -->
@@ -897,6 +1020,8 @@
 		<Formula ID="12" Data="10+(%d/100)" /> <!-- Agility -->
 		<Formula ID="13" Data="10+(%d/120)+(%d/130)" /> <!-- Strength, Agility -->
 		<Formula ID="14" Data="15+(%d/100)+(%d/90)" /> <!-- Strength, Command -->
+		<Formula ID="15" Data="((((%d*25/%d+5)+%d)/2)+(%d*1))+14.5" />
+		<Formula ID="16" Data="(((%d*25/%d+10)+%d)/2)+(%d*1)" />
 	</CombatPower>
 	<Wing5thDamage>
 		<Formula ID="0" Data="300+(%d^1.6*23)" /> <!-- WingsLevel -->

@@ -167,6 +167,6 @@
 
 	<SpecialOptionSettings>
 		<Option Index="0" Type="0" BonusType="2" BonusValue="3" BonusRate="100" SeedCountFire="1" SeedCountWater="1" SeedCountIce="1" SeedCountWind="1" SeedCountLight="1" SeedCountEarth="1" Name="Double damage rate Increase" />
-		<Option Index="1" Type="0" BonusType="2" BonusValue="1" BonusRate="100" SeedCountFire="1" SeedCountWater="3" SeedCountIce="1" SeedCountWind="3" SeedCountLight="1" SeedCountEarth="2" Name="Opponent defensibility ignorance Attack" />
+		<Option Index="1" Type="0" BonusType="2" BonusValue="1" BonusRate="100" SeedCountFire="1" SeedCountWater="3" SeedCountIce="1" SeedCountWind="3" SeedCountLight="1" SeedCountEarth="2" Name="Opponent Defensibility ignorance Attack" />
 	</SpecialOptionSettings>
 </SocketSystem>

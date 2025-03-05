@@ -25,6 +25,11 @@
 //		~ 5: Thursday
 //		~ 6: Friday
 //		~ 7: Saturday
+//
+//	Hour: Hour to start the event, 0-23
+//	Minute: Minute to start the event: 0-59
+//	Second: Second to start the event, 0-59 or -1 if not applies
+//
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //~~ The event can be scheduled on same day as Arca Battle event but at different time range
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

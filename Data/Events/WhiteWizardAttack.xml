@@ -34,6 +34,10 @@
 //		~ 6: Friday
 //		~ 7: Saturday
 //
+//	Hour: Hour to start the event, 0-23
+//	Minute: Minute to start the event: 0-59
+//	Second: Second to start the event, 0-59 or -1 if not applies
+//
 // ### WhiteWizard::SpawnSettings::Monster ###
 //	Index: Index of a monster, event can accept only monsters 135-137
 //	Respawn: Determines whether monster re-spawns after being killed, 0/1

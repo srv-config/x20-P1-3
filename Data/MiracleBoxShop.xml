@@ -13,7 +13,7 @@
 //	Enable: Allows to disable or enable the system, 0/1
 //
 // ### MiracleBoxShop::RewardSettings::Section ###
-//	ID: Section identification numer, starts from 0, max 25 sections
+//	ID: Section identification number, starts from 0, max 25 sections
 //	SkillRate: Skill chance rate for the section, n/1000000
 //	LuckRate: Luck chance rate for the section, n/1000000
 //	OptionRate: Option chance rate for the section, n/1000000
@@ -27,7 +27,7 @@
 // ### MiracleBoxShop::RewardSettings::ItemRewardList::Section::Input::Item ###
 //	ItemCat: Category of item required to apply for the draw, see ItemList.xml
 //	ItemIndex: Index of item required to apply for the draw, see ItemList.xml
-//	Cost: Cost of the draw, expressen in Zen or number of required items
+//	Cost: Cost of the draw, expresses in Zen or number of required items
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // List of input items accept must 3 entries. If Zen requirement is a price for a section then it should
 // be the only requirement. Zen and items requirements cannot be mixed together.
@@ -62,6 +62,10 @@
 //			-1: No Option
 //			-2: Random options set (based on rates from ArtifactSystem.xml)
 //			X1;Y1;X2;Y2;X3;Y3: X is OptionType value from ArtifactOption.xml, -1 if not applies, Y is value index, 1~10, referring to ValueX of selected option, -1 if not applies
+//		WingCore:
+//			-1: No Option
+//			-2: Random count of random options (based on rates from WingCoreOption.xml)
+//			-3;X: Specified count of random options, the 'X' defines count of wing core options, max 2 (options selection based on rates from WingCoreOption.xml)
 //
 //	SetItem: Determines whether reward item should be a set item (random, basing on base item type), 0/1
 //	SocketCount:

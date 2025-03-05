@@ -39,6 +39,10 @@
 //		~ 6: Friday
 //		~ 7: Saturday
 //
+//	Hour: Hour to start the event, 0-23
+//	Minute: Minute to start the event: 0-59
+//	Second: Second to start the event, 0-59 or -1 if not applies
+//
 // ### BloodCastle::EntryLevel::Castle ###
 //	Level: Level of the event the the configuration applies to
 //	MinLevel: Minimum level of player to allow entry to specified event level

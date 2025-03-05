@@ -416,7 +416,7 @@
 	</Section>
 	
 	<Section ID="87">
-		<Item Cat="14" Index="366" Option1="88" Value1="50" Option2="1" Value2="10" Time="1800" /> <!-- Piece of Pizza -->
+		<Item Cat="14" Index="366" Option1="128" Value1="50" Option2="1" Value2="10" Time="1800" /> <!-- Piece of Pizza -->
 	</Section>
 	
 	<Section ID="88">

@@ -39,6 +39,10 @@
 //		~ 6: Friday
 //		~ 7: Saturday
 //
+//	Hour: Hour to start the event, 0-23
+//	Minute: Minute to start the event: 0-59
+//	Second: Second to start the event, 0-59 or -1 if not applies
+//
 // ### XMasAttack::SpawnSettings::Monster ###
 //	Index: Index of the monster, see MonsterList.xml
 //	Respawn: Determines if monster is re-spawning after kill, 0/1

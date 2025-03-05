@@ -19,7 +19,7 @@
 		<Section Index="0" DropRate="5000000" />
 		<Section Index="1" DropRate="0" />
 		<Section Index="2" DropRate="5000000" />
-		<Section Index="3" DropRate="0" />
+		<Section Index="3" DropRate="5000000" />
 		<Section Index="4" DropRate="5000000" />
 		<Section Index="5" DropRate="5000000" />
 		<Section Index="6" DropRate="5000000" />

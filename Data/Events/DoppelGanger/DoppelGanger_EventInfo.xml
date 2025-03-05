@@ -3,7 +3,7 @@
 // ============================================================
 // == INTERNATIONAL GAMING CENTER NETWORK
 // == www.igcn.mu
-// == (C) 2019 IGC-Network (R)
+// == (C) 2025 IGC-Network (R)
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // == File is a part of IGCN Group MuOnline Server files.
 // ============================================================
@@ -22,7 +22,8 @@
 //	GC: Monster (883) attacks first always, 0/1
 //	LW: Monster (881) attacks first always, 0/1
 //	LM: Monster (882) attacks first always, 0/1
-//	IK: Monster (917) attacks first always, 0/1
+//	IK: Monster (917) attacks first always, 0/1, (temporary not supported by game)
+//	AC: Monster (961) attacks first always, 0/1
 //	AttackFirstRate: Chance rate to get attacked by monster first (if 0 for any of above), n/10000
 //	
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -38,7 +39,7 @@
 // STRICTLY NO COMMENTS INSIDE TAGS
 -->
 <DoppelGanger MinParty="2" MinUserInParty="5">
-<MonsterAttacksFirst DG="1" DW="0" DK="0" ELF="0" MG="0" DL="1" SU="0" RF="0" GL="0" RW="0" SLA="0" GC="0" LW="0" LM="0" IK="0" AttackFirstRate="7000" />
+<MonsterAttacksFirst DG="1" DW="0" DK="0" ELF="0" MG="0" DL="1" SU="0" RF="0" GL="0" RW="0" SLA="0" GC="0" LW="0" LM="0" AC="0" AttackFirstRate="7000" />
 	<Schedule>
 		<Time NotifyHour="2" NotifyMin="20" ReadyHour="2" ReadyMin="27" StartHour="2" StartMin="30" />
 		<Time NotifyHour="12" NotifyMin="20" ReadyHour="12" ReadyMin="27" StartHour="12" StartMin="30" />

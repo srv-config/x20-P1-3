@@ -16,7 +16,6 @@
 //		~ 0: MuRummy
 //		~ 1: Reserved (unused)
 //		~ 2: EvoMon
-//		~ 3: Count (unused)
 //
 //	SubType: Sub-type of event of event type to display banner for, applies to banner Type 2 (EvoMon) only
 //		~ 0: Maximum Level

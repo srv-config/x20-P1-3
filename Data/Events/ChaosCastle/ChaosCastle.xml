@@ -35,9 +35,9 @@
 //		~ 6: Friday
 //		~ 7: Saturday
 //
-//	Hour: Start hour of the event, 0-23
-//	Minute: Start minute of the event, 0-59
-//	Second: Second to start the event, -1 if not applies
+//	Hour: Hour to start the event, 0-23
+//	Minute: Minute to start the event: 0-59
+//	Second: Second to start the event, 0-59 or -1 if not applies
 //
 // ### ChaosCastle::EntryLevel::Castle ###
 //	Level: Level of the event the the configuration applies to
