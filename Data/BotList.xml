@@ -3,7 +3,7 @@
 // ============================================================
 // == INTERNATIONAL GAMING CENTER NETWORK
 // == www.igcn.mu
-// == (C) 2010-2024 IGC-Network (R)
+// == (C) 2010-2025 IGC-Network (R)
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // == Modify if you know what you do only!
 // == File is a part of IGCN Group MuOnline Server files.
@@ -12,6 +12,7 @@
 // ### BotSystem::List::Bot ###
 //	Type: Type of BOT
 //		~ 0: Buffer
+//		~ 2: Alchemist Trade BOT (requires plugin available from store)
 //
 //	Class:
 //		~ 0: Dark Wizard
@@ -73,6 +74,7 @@
 //		~ 9: Pedant
 //		~ 10: Left Ring
 //		~ 11: Right Ring
+//
 //	ItemCat: Category of item, see ItemList.xml
 //	ItemIndex: Index of item, see ItemList.xml
 //	ItemLevel: Level of item, 0-15
