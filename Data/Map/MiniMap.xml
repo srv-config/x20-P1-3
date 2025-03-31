@@ -520,40 +520,37 @@
 		<Tag Id="1" MapNumber="131" X="143" Y="208" Name="Red Portal (B)" />
 		<Tag Id="2" MapNumber="131" X="196" Y="27" Name="Blue Portal (A)" />
 		<Tag Id="3" MapNumber="131" X="76" Y="75" Name="Blue Portal (B)" />
-	<!-- Red Smoke Entrance -->
+		<Tag Id="4" MapNumber="131" X="205" Y="141" Name="Earth Elite Zone" />
+		<Tag Id="5" MapNumber="131" X="205" Y="219" Name="Fire Elite Zone" />
+		<Tag Id="6" MapNumber="131" X="38" Y="198" Name="Darkness Elite Zone" />
+		<Tag Id="7" MapNumber="131" X="42" Y="117" Name="Wind Elite Zone" />
+		<Tag Id="8" MapNumber="131" X="62" Y="30" Name="Water Elite Zone" />
+	<!-- Red Smoke Icarus -->
 		<Tag Id="0" MapNumber="132" X="120" Y="117" Name="Fire - Entrance" />
 		<Tag Id="1" MapNumber="132" X="120" Y="132" Name="Water - Entrance" />
 		<Tag Id="2" MapNumber="132" X="127" Y="110" Name="Earth - Entrance" />
 		<Tag Id="3" MapNumber="132" X="129" Y="135" Name="Wind - Entrance" />
 		<Tag Id="4" MapNumber="132" X="134" Y="127" Name="Darkness - Entrance" />
-	<!-- Temple of Arenil Entrance -->
-		<Tag Id="0" MapNumber="133" X="128" Y="020" Name="Arenil - Portal [A]" />
+	<!-- Temple of Arenil -->
+		<Tag Id="0" MapNumber="133" X="128" Y="20" Name="Arenil - Portal [A]" />
 		<Tag Id="1" MapNumber="133" X="125" Y="195" Name="Arenil - Portal [B]" />
-		<Tag Id="2" MapNumber="133" X="130" Y="055" Name="Arenil - Safe Zone" />
-	<!-- Temple of Arenil Zones -->
-		<Tag Id="3" MapNumber="133" X="098" Y="193" Name="Arenil - Fire Zone" />
+		<Tag Id="2" MapNumber="133" X="130" Y="55" Name="Arenil - Safe Zone" />
+		<Tag Id="3" MapNumber="133" X="98" Y="193" Name="Arenil - Fire Zone" />
 		<Tag Id="4" MapNumber="133" X="125" Y="143" Name="Arenil - Water Zone"/>
-		<Tag Id="5" MapNumber="133" X="140" Y="033" Name="Arenil - Earth Zone"/>
+		<Tag Id="5" MapNumber="133" X="140" Y="33" Name="Arenil - Earth Zone"/>
 		<Tag Id="6" MapNumber="133" X="155" Y="193" Name="Arenil - Wind Zone" />
-		<Tag Id="7" MapNumber="133" X="115" Y="033" Name="Arenil - Darkness Zone" />
+		<Tag Id="7" MapNumber="133" X="115" Y="33" Name="Arenil - Darkness Zone" />
+		<Tag Id="8" MapNumber="133" X="47" Y="202" Name="Fire - Elite Zone" />
+		<Tag Id="9" MapNumber="133" X="152" Y="130" Name="Water - Elite Zone" />
+		<Tag Id="10" MapNumber="133" X="211" Y="26" Name="Earth - Elite Zone" />
+		<Tag Id="11" MapNumber="133" X="170" Y="216" Name="Wind - Elite Zone" />
+		<Tag Id="12" MapNumber="133" X="60" Y="35" Name="Darkness - Elite Zone" />
 	<!-- Abyss of Atlans 3 -->
 		<Tag Id="0" MapNumber="130" X="36" Y="95" Name="Darkness Elite Zone" />
 		<Tag Id="1" MapNumber="130" X="78" Y="218" Name="Earth Elite Zone" />
 		<Tag Id="2" MapNumber="130" X="184" Y="212" Name="Fire Elite Zone" />
 		<Tag Id="3" MapNumber="130" X="217" Y="100" Name="Wind Elite Zone" />
 		<Tag Id="4" MapNumber="130" X="132" Y="24" Name="Water Elite Zone" />
-	<!-- Scorched Canyon -->
-		<Tag Id="0" MapNumber="131" X="205" Y="141" Name="Earth Elite Zone" />
-		<Tag Id="1" MapNumber="131" X="205" Y="219" Name="Fire Elite Zone" />
-		<Tag Id="2" MapNumber="131" X="38" Y="198" Name="Darkness Elite Zone" />
-		<Tag Id="3" MapNumber="131" X="42" Y="117" Name="Wind Elite Zone" />
-		<Tag Id="4" MapNumber="131" X="62" Y="30" Name="Water Elite Zone" />
-	<!-- Temple of Arenil Elite Zones -->
-		<Tag Id="0" MapNumber="133" X="47" Y="202" Name="Fire - Elite Zone" />
-		<Tag Id="1" MapNumber="133" X="152" Y="130" Name="Water - Elite Zone" />
-		<Tag Id="2" MapNumber="133" X="211" Y="26" Name="Earth - Elite Zone" />
-		<Tag Id="3" MapNumber="133" X="170" Y="216" Name="Wind - Elite Zone" />
-		<Tag Id="4" MapNumber="133" X="60" Y="35" Name="Darkness - Elite Zone" />
 	<!-- Ashy Aida -->
 		<Tag Id="0" MapNumber="134" X="20" Y="59" Name="Fire - Elite Zone" />
 		<Tag Id="1" MapNumber="134" X="47" Y="108" Name="Water - Elite Zone" />
@@ -566,7 +563,7 @@
 		<Tag Id="2" MapNumber="137" X="124" Y="10" Name="Earth - Elite Zone" />
 		<Tag Id="3" MapNumber="137" X="225" Y="212" Name="Wind - Elite Zone" />
 		<Tag Id="4" MapNumber="137" X="235" Y="11" Name="Darkness - Elite Zone" />
-	<!-- Volcano Ignis Elite Zones -->
+	<!-- Volcano Ignis -->
 		<Tag Id="0" MapNumber="138" X="171" Y="40" Name="Fire - Elite Zone" />
 		<Tag Id="1" MapNumber="138" X="30" Y="135" Name="Water - Elite Zone"/>
 		<Tag Id="2" MapNumber="138" X="105" Y="37" Name="Earth - Elite Zone"/>
