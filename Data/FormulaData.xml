@@ -50,11 +50,11 @@
 //		~ 0-10: Used within ExcellentOptions.xml to calculate corresponding excellent option value
 //		~ 11-24: Used within KegendaryWeaponSetOption.xml to calculate corresponding legendary option value
 //		~ 25: Additional Damage Legendary green option, for items below level 10
-//		~ 26: Additional Damage Legendary green option, for items equal or above level 10
+//		~ 26: Value of bonus added to result of formula 25 if item level is equal or above 10
 //		~ 27: Additional Curse/Wizardry Damage Legendary green option, for items below level 10
-//		~ 28: Additional Curse/Wizardry Damage Legendary green option, for items equal or above level 10
+//		~ 28: Value of bonus added to result of formula 27 if item level is equal or above 10
 //		~ 29: Additional Defense Legendary green option, for items below level 10
-//		~ 30: Additional Defense Legendary green option, for items equal or above level 10
+//		~ 30: Value of bonus added to result of formula 29 if item level is equal or above 10
 //		~ 33-50: Used within LegendaryItemBonusOption.xml to calculate corresponding legendary bonus option value
 //		~ 51: Defense bonus value when wearing five pieces legendary set of level 10 or higher
 //		~ 52: Defense bonus value when wearing five pieces legendary set of level 11 or higher
