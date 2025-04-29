@@ -11,21 +11,21 @@
 -- For more CalcCharacter options refer to \Data\CalcCharacter.ini
 
 -- Character Classes
-CLASS_WIZARD                                          = 0	-- Fairy Elf, Muse Elf, High Elf
-CLASS_KNIGHT                                          = 1	-- Dark Wizard, Soul Master, Grand Master
-CLASS_ELF                                             = 2	-- Dark Knight, Blade Knight, Blade Master
-CLASS_GLADIATOR                                       = 3	-- Magic Gladiator, Duel Master
-CLASS_DARKLORD                                        = 4	-- Dark Lord, Lord Emperor
-CLASS_SUMMONER                                        = 5	-- Summoner, Bloody Summoner, Dimension Master
-CLASS_RAGEFIGHTER                                     = 6	-- Rage Fighter, Fist Master
-CLASS_GROWLANCER									  = 7	-- Grow Lancer, Mirage Lancer
-CLASS_RUNEWIZARD									  = 8	-- Rune Wizard, Rune Spell Master, Grand Rune Master
-CLASS_SLAYER									  	  = 9	-- Slayer, Royal Slayer, Master Slayer, Slaughterer
-CLASS_GUNCRUSHER									  = 10	-- Gun Crusher, Gun Breaker, Master Gun Breaker, Heist Gun Crusher
-CLASS_LIGHTWIZARD									  = 11	-- Light Wizard, Shining Wizard, Luminous Wizard
-CLASS_LEMURIAMAGE									  = 12	-- Lemuria Mage, Warmage, Archmage, Mystic Mage
-CLASS_ILLUSIONKNIGHT								  = 13	-- Illusion Knight, Mirage Knight, Illusion Master, Mystic Knight
-CLASS_ALCHEMIST										  = 14  -- Alchemist, Alchemic Magician, Alchemic Master, Alchemic Force, Creator
+CLASS_WIZARD = 0 -- Fairy Elf, Muse Elf, High Elf
+CLASS_KNIGHT = 1 -- Dark Wizard, Soul Master, Grand Master
+CLASS_ELF = 2 -- Dark Knight, Blade Knight, Blade Master
+CLASS_GLADIATOR = 3 -- Magic Gladiator, Duel Master
+CLASS_DARKLORD = 4 -- Dark Lord, Lord Emperor
+CLASS_SUMMONER = 5 -- Summoner, Bloody Summoner, Dimension Master
+CLASS_RAGEFIGHTER = 6 -- Rage Fighter, Fist Master
+CLASS_GROWLANCER = 7 -- Grow Lancer, Mirage Lancer
+CLASS_RUNEWIZARD = 8 -- Rune Wizard, Rune Spell Master, Grand Rune Master
+CLASS_SLAYER = 9 -- Slayer, Royal Slayer, Master Slayer, Slaughterer
+CLASS_GUNCRUSHER = 10 -- Gun Crusher, Gun Breaker, Master Gun Breaker, Heist Gun Crusher
+CLASS_LIGHTWIZARD = 11 -- Light Wizard, Shining Wizard, Luminous Wizard
+CLASS_LEMURIAMAGE = 12 -- Lemuria Mage, Warmage, Archmage, Mystic Mage
+CLASS_ILLUSIONKNIGHT = 13 -- Illusion Knight, Mirage Knight, Illusion Master, Mystic Knight
+CLASS_ALCHEMIST = 14 -- Alchemist, Alchemic Magician, Alchemic Master, Alchemic Force, Creator
 
 -- Character Damage - Fist Fighting - (Dark Wizard, Soul Master, Grand Master)
 function WizardDamageCalc(Strength, Dexterity, Vitality, Energy)
@@ -712,7 +712,7 @@ function CalcDefenseSuccessRate_PvP(Class, Strength, Dexterity, Vitality, Energy
 end
 
 -- Character Elemental Attack - General
-function ElementalDamageCalc(Class, Strength, Dexterity, Vitality, Energy, ItemMinDamage, ItemMaxDamage)
+function ElementalDamageCalc(Class, Strength, Dexterity, Vitality, Energy, Command, ItemMinDamage, ItemMaxDamage)
 	local MinDamage = 0
 	local MaxDamage = 0
 	

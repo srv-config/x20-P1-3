@@ -2,7 +2,7 @@
 // ============================================================
 // == INTERNATIONAL GAMING CENTER NETWORK
 // == www.igcn.mu
-// == (C) 2010-2024 IGC-Network (R)
+// == (C) 2010-2025 IGC-Network (R)
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // == File is a part of IGCN Group MuOnline Server files.
 // ============================================================
@@ -29,8 +29,8 @@
 //
 //	PartyDropRate: Chance to apply party drop, if chance rate draw succeed the bag will be executed individually for every party member within party range of 9 tiles from party master with consideration of PartyOneDropOnly setting, does not apply to INVENTORY bag type, n/10000
 //	PartyOneDropOnly: Defines type of item drop for party
-//		~ 0: Bag is executed individually for item and coin award for every party member within party range of 9 tiles from party master, for coin share type check PartyShareType setting
-//		~ 1: Bag is executed once only for item drop but issues coins for every party member within party range of 9 tiles from party master, for coin share type check PartyShareType setting
+//		~ 0: Bag is executed individually for item and coin/ruud award for every party member within party range of 9 tiles from party master, for coin/ruud share type check PartyShareType setting
+//		~ 1: Bag is executed once only for item drop but issues coins/ruud for every party member within party range of 9 tiles from party master, for coin/ruud share type check PartyShareType setting
 //			
 //	PartyShareType: Determined mode of dividing share among party members, includes Coin, Ruud and Zen
 //		~ 0: Share proportionally to number of party members, e.g. coin reward is set to 100 and party members is 5, so each party member within 9 tiles from party master will receive 20 coins.
@@ -70,7 +70,7 @@
 //	PlayerMinReset: Minimum reset of player to apply Coin (must be lower or equal to PlayerMaxReset)
 //	PlayerMaxReset: Maximum reset of player to apply Coin (must be greater or equal to PlayerReset)
 //
-// ### ItemBag::Ruud ### - awards with configured count of Ruud basing of the rate (if Ruud is awarded then no item will be given)
+// ### ItemBag::Ruud ### - awards with configured count of Ruud basing of the rate
 //	GainRate: Chance rate to award with configured amount of Ruud, n/10000, can be 0
 //	MinValue: Minimum amount of Ruud to award with
 //	MaxValue: Maximum amount of Ruud to award with
