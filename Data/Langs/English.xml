@@ -896,6 +896,7 @@
 		<Msg ID="870" Text="Fifth wings with more than %d options cannot be sold in store." />
 		<Msg ID="871" Text="Full excellent option items cannot be sold in store." />
 		<Msg ID="872" Text="Items with %d or more sockets cannot be sold in store." />
+		<Msg ID="873" Text="You are lacking %d Jewels of Creation to proceed." />
 	</Message>
 	
 	<AutoStat>
