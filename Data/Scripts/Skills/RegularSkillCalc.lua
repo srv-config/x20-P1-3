@@ -1,33 +1,36 @@
 -- // ============================================================
 -- // == INTERNATIONAL GAMING CENTER NETWORK
 -- // == www.igcn.mu
--- // == (C) 2010-2024 IGC-Network (R)
+-- // == (C) 2010-2025 IGC-Network (R)
 -- // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -- // == File is a part of IGCN Group MuOnline Server files.
 -- // ============================================================
 
--- RegularSkillCalc Control Script, Lua v5.3
--- Skill Configuration (Result, Time) - Can be modified to adjust for own needs
+-- RegularSkillCalc Control Script, Lua v5.3\
 
 -- SkillID refers to Index of skill in \Data\Skills\SkillList.txt
--- BuffID refers to \Data\BuffEffectManager.cfg
+-- BuffID refers to \Data\BuffEffectManager.xml
 
 -- Character Classes
-CLASS_WIZARD                                          = 0
-CLASS_KNIGHT                                          = 1
-CLASS_ELF                                             = 2
-CLASS_GLADIATOR                                       = 3
-CLASS_DARKLORD                                        = 4
-CLASS_SUMMONER                                        = 5
-CLASS_RAGEFIGHTER                                     = 6
-CLASS_GROWLANCER									  = 7
-CLASS_RUNEWIZARD									  = 8
-CLASS_SLAYER									  	  = 9
-CLASS_GUNCRUSHER									  = 10
-CLASS_LIGHTWIZARD									  = 11
-CLASS_LEMURIAMAGE									  = 12
-CLASS_ILLUSIONKNIGHT								  = 13
-CLASS_ALCHEMIST										  = 14							   
+CLASS_WIZARD = 0
+CLASS_KNIGHT = 1
+CLASS_ELF = 2
+CLASS_GLADIATOR = 3
+CLASS_DARKLORD = 4
+CLASS_SUMMONER = 5
+CLASS_RAGEFIGHTER = 6
+CLASS_GROWLANCER = 7
+CLASS_RUNEWIZARD = 8
+CLASS_SLAYER = 9
+CLASS_GUNCRUSHER = 10
+CLASS_LIGHTWIZARD = 11
+CLASS_LEMURIAMAGE = 12
+CLASS_ILLUSIONKNIGHT = 13
+CLASS_ALCHEMIST = 14
+
+-- Target types
+TARGET_TYPE_PLAYER = 1
+TARGET_TYPE_MONSTER = 2
 
 -- SkillID: 1, Poison
 function PoisonCalc(Class, InDamage, Strength, Dexterity, Vitality, Energy)
@@ -124,28 +127,28 @@ end
 -- SkillID: 14, Inferno
 function InfernoCalc(Class, InDamage, Strength, Dexterity, Vitality, Energy)
  local OutDamage = InDamage
- 
+
  return OutDamage
 end
 
 -- SkillID: 17, Energy Ball
 function EnergyBallCalc(Class, InDamage, Strength, Dexterity, Vitality, Energy)
  local OutDamage = InDamage
- 
+
  return OutDamage
 end
 
 -- SkillID: 38, Decay
 function DecayCalc(Class, InDamage, Strength, Dexterity, Vitality, Energy)
  local OutDamage = InDamage
- 
+
  return OutDamage
 end
 
 -- SkillID: 39, Ice Storm
 function IceStormCalc(Class, InDamage, Strength, Dexterity, Vitality, Energy)
  local OutDamage = InDamage
- 
+
  return OutDamage
 end
 
@@ -153,13 +156,13 @@ end
 function WizardMagicDefense(Index, TargetIndex, TargetClass, Dexterity, Energy)
 	local SkillEffect = Dexterity / 50 + Energy / 200 + 10
 	local SkillTime = Energy / 40 + 60
-	
-	if(Index == TargetIndex and SkillEffect > 50) then -- casting spell on yourself
+
+	if (Index == TargetIndex and SkillEffect > 50) then -- casting spell on yourself
 		SkillEffect = 50
 	elseif (Index ~= TargetIndex and SkillEffect > 50)  then -- casting spell on others
 		SkillEffect = 50
 	end
-	
+
 	return SkillEffect, SkillTime
 end
 
@@ -1225,6 +1228,18 @@ function SlayerBatFlockCalc(InDamage, Strength, Dexterity)
 	OutDamage = OutDamage * 0.5
 	
 	return OutDamage
+end
+
+-- SkillID: Bat Flock DOT, value of DOT is calculated using formula 9 in CalcCharacter.ini::Character from FormulaData.xml
+-- Use below function to manipulate the output damage value
+function BatFlockDotDamage(InDamage, DOT, Strength, Dexterity, Vitality, Energy, TargetType, TargetClass)
+	local OutDamage = 0
+	
+	if (TargetType == TARGET_TYPE_PLAYER) then
+		OutDamage = InDamage
+	elseif (TargetType == TARGET_TYPE_MONSTER) then
+		OutDamage = InDamage
+	end
 end
 
 -- SkillID: 294, Pierce Attack

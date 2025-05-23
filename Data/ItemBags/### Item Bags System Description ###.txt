@@ -11,7 +11,7 @@
 //
 // ### ItemBag::BagConfig ###
 //	Name: Name of an Item or Monster
-//	ItemRate: Chance to get an item from the bag, n/10000
+//	ItemRate: Chance to get an item from the bag, n/10000, if value lower than 10000 then Zen drop is possible
 //	SetItemRate: Drop rate of random set item selected from entire pool of available ancients, rate is being drawn individually for every drop attempt, n/10000, can be 0
 //	SetItemCount: Number of set items to drop if SetItemRate is set to value greater than 0
 //	MasterySetItemInclude: If set to 1 the set item drop based on SetItemRate will include mastery set items, otherwise set to 0
@@ -161,7 +161,7 @@
 //			-3;X: Specified count of random options, the 'X' defines count of wing core options, max 2 (options selection based on rates from WingCoreOption.xml)
 //
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-//~~ Advanced config notes: The values -1, -2 and -3 are stored under Exc1 variable in ItemBagScript.lua, the options count (X) for -3 value is stored under Exc2 variable
+//~~ Notes: The values -1, -2 and -3 are stored under Exc1 variable in ItemBagScript.lua, the options count (X) for -3 value is stored under Exc2 variable
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //
 //	SetItem: 0 ~ no ancient, 1 ~ ancient (random Tier of specified item) - must be added as ancient, otherwise option will be ignored
@@ -173,11 +173,21 @@
 //		~ 3: up to three slots
 //		~ 4: up to four slots
 //		~ 5: up to five slots
-//	    ~ -2: random count of socket slots (Pentagrams and Socket Items)
+//		~ -2: random count of socket slots (Pentagrams and Socket Items)
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-//~~ Type attribute of the item must be set to 2 - refer to ItemList.xml
+//~~ Type attribute of the item must be set to 2, refer to ItemList.xml
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-//	ElementalItem: 0 ~ no Elemental attribute, 1 ~ Fire, 2 ~ Water, 3 ~ Earth, 4 ~ Wind, 5 ~ Darkness, -1 ~ Random attribute
+//
+//	OptSlotInfo: Allows to configure option slots for mastery pentagrams, X;Y where X is minimum number of options slots and Y is maximum number of options slots, 0-4
+//	ElementalItem:
+//		~ 0: No element
+//		~ 1: Fire
+//		~ 2: Water
+//		~ 3: Earth
+//		~ 4: Wind
+//		~ 5: Darkness
+//		~ -1: Random element
+//
 //	MuunEvolutionItemCat: Attribute used and required for item 16,211 (Evolution Stone) only, defines Muun Item Category
 //	MuunEvolutionItemIndex: Attribute used and required for item 16,211 (Evolution Stone) only, defines Muun Item Index
 //	KindA: Attribute automatically assigned on a basis on ItemList.xml configuration, no necessary to be defined in bag
@@ -187,7 +197,7 @@
 // Bag structure supports multiple DropSections. Each DropSections supports multiple DropAllow sub-sections. Each DropAllow section may have multiple Drop sub-sections.
 //
 //~~ Understanding DropSection ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-// Every item bag (except INVENTORY bag type) support ability to define multiple DropSection. It is used to drop two or more items from different sections of different rules for single player, check Item_(14,354,0)_PlayTime_Box.xml for examples.
+// Every item bag (except INVENTORY bag type) supports ability to define multiple DropSection. It is used to drop two or more items from different sections of different rules for single player, check Item_(14,354,0)_PlayTime_Box.xml for examples.
 //
 //~~ Understanding DropAllow/Drop sections selection ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Qualified (player meets requirements of) DropAllow section is selected on basis of its weight. Weight (priority) of DropAllow section is equal to sum of all Rates of Drop sections and divided by number of Drop sections contained inside DropAllow section.
