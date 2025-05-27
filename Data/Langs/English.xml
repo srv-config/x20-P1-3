@@ -3,7 +3,7 @@
 // ============================================================
 // == INTERNATIONAL GAMING CENTER NETWORK
 // == www.igcn.mu
-// == (C) 2010-2024 IGC-Network (R)
+// == (C) 2010-2025 IGC-Network (R)
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // == Modify if you know what you do only!
 // == File is a part of IGCN Group MuOnline Server files.
@@ -25,7 +25,7 @@
 // STRICTLY NO COMMENTS INSIDE TAGS 
 -->
 
-<Language Password="gtyhjuik">
+<Language>
 	<Message>
 		<Msg ID="1" Text="GameServer closed" />
 		<Msg ID="2" Text="Server will close automatically in %d second(s)" />
@@ -898,6 +898,7 @@
 		<Msg ID="872" Text="Items with %d or more sockets cannot be sold in store." />
 		<Msg ID="873" Text="You are lacking %d Jewels of Creation to proceed." />
 		<Msg ID="874" Text="To reset you must be at minimum level of: %d (normal) and %d (master)." />
+		<Msg ID="875" Text="[Party Move] You need to have at least %s VIP type to be moved to party leader location." />
 	</Message>
 	
 	<VIPSystem>
