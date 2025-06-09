@@ -182,7 +182,10 @@
 //
 // ### VIPSystem::VipExtension::BuffExtRules::Rule ###
 //	ID: Unique ID of a rule
-//	JoinGameBuffID: Buff index (see BuffEffectManager.xml) to set upon entry to the game, max 10 separated with semicolon, -1 is not applies
+//
+// ### VIPSystem::VipExtension::BuffExtRules::Rule::JoinGameBuff:
+//	ID: Buff index (see BuffEffectManager.xml) to set upon entry to the game, max 10 separated with semicolon, -1 is not applies
+//	Duration: Duration of the buff, -10 for unlimited time (may not work with certain buffs), seconds
 //
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //~~ NOTE: Below configuration is proposed example, system is allowing to define own VIP types and names.
@@ -303,8 +306,12 @@
 		</ItemExtRules>
 		
 		<BuffExtRules>
-			<Rule ID="0" JoinGameBuffID="-1;-1;-1;-1;-1;-1;-1;-1;-1;-1" />
-			<Rule ID="1" JoinGameBuffID="-1;-1;-1;-1;-1;-1;-1;-1;-1;-1" />
+			<Rule ID="0">
+				<JoinGameBuff ID="-1" Duration="0" />
+			</Rule>
+			<Rule ID="1">
+				<JoinGameBuff ID="-1" Duration="0" />
+			</Rule>
 		</BuffExtRules>
 	</VipExtension>
 </VIPSystem>

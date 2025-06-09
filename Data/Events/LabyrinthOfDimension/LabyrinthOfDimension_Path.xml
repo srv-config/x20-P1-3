@@ -2281,7 +2281,7 @@
 		<Move Row="9" Column="9" MapID="2" AreaType="3" AreaIndex="0" Top="2" Bottom="0" Left="2" Right="0" />
 	</Path>
 	<Path ID="23" Rows="10" Columns="10">
-		<Move Row="0" Column="0" MapID="3" AreaType="2" AreaIndex="r" Top="0" Bottom="1" Left="0" Right="1" />
+		<Move Row="0" Column="0" MapID="3" AreaType="2" AreaIndex="0" Top="0" Bottom="1" Left="0" Right="1" />
 		<Move Row="0" Column="1" MapID="10" AreaType="3" AreaIndex="0" Top="0" Bottom="2" Left="2" Right="2" />
 		<Move Row="0" Column="2" MapID="14" AreaType="2" AreaIndex="0" Top="0" Bottom="1" Left="1" Right="1" />
 		<Move Row="0" Column="3" MapID="5" AreaType="2" AreaIndex="0" Top="0" Bottom="1" Left="1" Right="1" />
