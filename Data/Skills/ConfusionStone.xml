@@ -3,7 +3,7 @@
 // ============================================================
 // == INTERNATIONAL GAMING CENTER NETWORK
 // == www.igcn.mu
-// == (C) 2010-2024 IGC-Network (R)
+// == (C) 2010-2025 IGC-Network (R)
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // == Modify if you know what you do only!
 // == File is a part of IGCN Group MuOnline Server files.
@@ -16,6 +16,10 @@
 // ### ConfusionStone ###
 //	DisappearTime: Stone disappearance time, seconds
 //	MonsterRegenTime: Time to respawn monster, seconds
+//	GiveExpMode:
+//		~ 0: Any player can get the exp
+//		~ 1: Only caster can get exp
+//		~ 2: Caster and his party members can get exp
 //
 // ### ConfusionStone::Map ###
 //	Number: Number of map to apply configuration to. Each map number can be defined once only
@@ -24,7 +28,7 @@
 // STRICTLY NO COMMENTS INSIDE TAGS 
 -->
 
-<ConfusionStone DisappearTime="60" MonsterRegenTime="10" >
+<ConfusionStone DisappearTime="60" MonsterRegenTime="10" GiveExpMode="0">
 	<Map Number="0"	MonsterIndex="7" />
 	<Map Number="1"	MonsterIndex="-1" />
 	<Map Number="2"	MonsterIndex="19" />
