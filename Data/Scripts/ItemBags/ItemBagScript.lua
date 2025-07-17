@@ -1,15 +1,13 @@
 -- // ============================================================
 -- // == INTERNATIONAL GAMING CENTER NETWORK
 -- // == www.igcn.mu
--- // == (C) 2022 IGC-Network (R)
+-- // == (C) 2010-2025 IGC-Network (R)
 -- // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -- // == File is a part of IGCN Group MuOnline Server files.
 -- // ============================================================
 
--- ItemBag Control Script, Lua v5.3
+-- ItemBag Control Script, Lua v5.4.8
 -- Can be modified to adjust ItemBags behavior for own needs
-
--- Any Custom chances to the script are out of support scope
 
 -- Define Bag Use Types
 	BAG_REWARD_GROUND = 0
@@ -451,35 +449,28 @@ function LoadItemBag() -- Bags Load
 	AddItemBag(BAG_EVENT, 80,0, 'Event_IllusionTemple_League_Match_Win') -- DropFunction /3/
 	AddItemBag(BAG_EVENT, 81,0, 'Event_IllusionTemple_League_Tournament_Win') -- DropFunction /3/
 	AddItemBag(BAG_EVENT, 82,0, 'Mix_Maple_Leaf_Reward') -- DropFunction /4/
-
 -- Bags for purpose of Cherry Blossom Mix System
 	AddItemBag(BAG_EVENT, 13,0, 'Mix_Cherry_Blossom_Red_Reward') -- DropFunction /4/
 	AddItemBag(BAG_EVENT, 21,0, 'Mix_Cherry_Blossom_Gold_Reward') -- DropFunction /4/
 	AddItemBag(BAG_EVENT, 47,0, 'Mix_Cherry_Blossom_White_Reward') -- DropFunction /4/
 	AddItemBag(BAG_EVENT, 48,0, 'Mix_Cherry_Blossom_Red_Reward') -- DropFunction /4/
-
 -- Bags for purpose of Monster Group Regen System
 	AddItemBag(BAG_EVENT, 150,0, 'Event_Monster_(561)_Medusa') -- DropFunction /3/ used when OverriteDefaultSettings from MonsterGroupRegen.xml is set to 1
 	AddItemBag(BAG_EVENT, 151,0, 'Event_Monster_(560)_Sapi_Queen') -- DropFunction /3/ used when OverriteDefaultSettings from MonsterGroupRegen.xml is set to 1
-
 -- Ice Wind Castle Event
 	AddItemBag(BAG_EVENT, 77,0, 'Event_IWC_GuildMaster') -- DropFunction /3/
 	AddItemBag(BAG_EVENT, 78,0, 'Event_IWC_GuildMember') -- DropFunction /3/
 	AddItemBag(BAG_EVENT, 79,0, 'Event_IWC_Player') -- DropFunction /3/
-
 -- Bags for purpose of Reset System
 	AddItemBag(BAG_EVENT, 300,0, 'ResetSystem_Regular')
 	AddItemBag(BAG_EVENT, 301,0, 'ResetSystem_Milestone')
-
 -- Bags for purpose of Scramble Word event
 	AddItemBag(BAG_EVENT, 400,0, 'Event_ScrambleWord_Level_1')
 	AddItemBag(BAG_EVENT, 401,0, 'Event_ScrambleWord_Level_2')
-
 -- Bags for purpose of Hide and Seek event
 	AddItemBag(BAG_EVENT, 500,0, 'Event_HideAndSeek_Round_1')
 	AddItemBag(BAG_EVENT, 501,0, 'Event_HideAndSeek_Round_2')
 	AddItemBag(BAG_EVENT, 502,0, 'Event_HideAndSeek_Round_3')
-
 -- Bags for purpose of Raffle event
 	AddItemBag(BAG_EVENT, 600,0, 'Event_Raffle_Winner')
 	AddItemBag(BAG_EVENT, 601,0, 'Event_Raffle_Lotto_3')
@@ -488,10 +479,8 @@ function LoadItemBag() -- Bags Load
 	AddItemBag(BAG_EVENT, 611,0, 'Event_Raffle_HitOrder_3')
 	AddItemBag(BAG_EVENT, 612,0, 'Event_Raffle_HitOrder_2')
 	AddItemBag(BAG_EVENT, 613,0, 'Event_Raffle_HitOrder_1')
-
 -- Bags for purpose of Imperial Guardian Event
 	AddItemBag(BAG_EVENT, 700,0, 'Event_ImperialGuardian(1)_Reward')
-
 -- Bags for purpose of Play Time event
 	AddItemBag(BAG_EVENT, 800,0, 'Event_PlayTime_Round_1')
 	AddItemBag(BAG_EVENT, 801,0, 'Event_PlayTime_Round_2')
@@ -503,16 +492,23 @@ function LoadItemBag() -- Bags Load
 	AddItemBag(BAG_EVENT, 807,0, 'Event_PlayTime_Round_8')
 	AddItemBag(BAG_EVENT, 808,0, 'Event_PlayTime_Round_9')
 	AddItemBag(BAG_EVENT, 809,0, 'Event_PlayTime_Round_10')
-
 -- Bags for purpose of Imperial Guardian additional rewards
 	AddItemBag(BAG_EVENT, 850,0, 'Event_ImperialGuardian_Level(1)_Additional_Reward')
-
 -- Bags for purpose of Blessing Box event
 	AddItemBag(BAG_EVENT, 900,0, 'Event_BlessingBox_(899)_Kill')
-
 -- Bags for purpose of Last Man Standing event
 	AddItemBag(BAG_EVENT, 1000,0, 'Event_LastManStanding_Looser_Reward') -- DropFunction /3/
 	AddItemBag(BAG_EVENT, 1050,0, 'Event_LastManStanding_Winner_Reward') -- DropFunction /3/
+-- Bags for purpose of DoppelGanger event
+	AddItemBag(BAG_EVENT, 1200,0, 'Event_DoppelGanger_InterimChest_1') -- DropFunction /3/
+	AddItemBag(BAG_EVENT, 1201,0, 'Event_DoppelGanger_InterimChest_2') -- DropFunction /3/
+	AddItemBag(BAG_EVENT, 1202,0, 'Event_DoppelGanger_InterimChest_3') -- DropFunction /3/
+	AddItemBag(BAG_EVENT, 1203,0, 'Event_DoppelGanger_FinalChest_1') -- DropFunction /3/
+	AddItemBag(BAG_EVENT, 1204,0, 'Event_DoppelGanger_FinalChest_2') -- DropFunction /3/
+	AddItemBag(BAG_EVENT, 1205,0, 'Event_DoppelGanger_FinalChest_3') -- DropFunction /3/
+	AddItemBag(BAG_EVENT, 1206,0, 'Event_DoppelGanger_FinalChest_4') -- DropFunction /3/
+	AddItemBag(BAG_EVENT, 1207,0, 'Event_DoppelGanger_FinalChest_5') -- DropFunction /3/
+	AddItemBag(BAG_EVENT, 1208,0, 'Event_DoppelGanger_FinalChest_6') -- DropFunction /3/
 end
 
 -- ### /1/ Drop Item (using Item Bag Structure) ### --
@@ -1328,7 +1324,7 @@ function EventBagMakeItem()
 		IsSocket = 1 -- set to one socket only
 	end
 
-	if (ItemInfo.ItemType == 13 and GetItemKindA(ItemID) == ITEM_KIND_A_MUUN_INVENTORY_ITEM) then																				  
+	if (ItemInfo.ItemType == 13 and GetItemKindA(ItemID) == ITEM_KIND_A_MUUN_INVENTORY_ITEM) then
 		ItemID = MakeItemID(16, ItemInfo.ItemIndex)
 	end
 

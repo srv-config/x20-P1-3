@@ -3,10 +3,15 @@
 // ============================================================
 // == INTERNATIONAL GAMING CENTER NETWORK
 // == www.igcn.mu
-// == (C) 2025 IGC-Network (R)
+// == (C) 2010-2025 IGC-Network (R)
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // == File is a part of IGCN Group MuOnline Server files.
 // ============================================================
+//
+// ### DoppelGanger ###
+//	MinParty: Minimum number of parties that participating in the event, 2-4
+//	MinUserInParty: Minimum number of players in each party participating the event, 1-5
+//
 // ### DoppelGanger::MonsterAttacksFirst ###
 //	DG: Monster (533) attacks first always, 0/1
 //	DW: Monster (534) attacks first always, 0/1
@@ -25,16 +30,52 @@
 //	IK: Monster (917) attacks first always, 0/1, (temporary not supported by game)
 //	AC: Monster (961) attacks first always, 0/1
 //	AttackFirstRate: Chance rate to get attacked by monster first (if 0 for any of above), n/10000
-//	
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-//~~ Monster Indexes affected with settings below
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-//		~ 529-539
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-//~~ Do not modify DoppelGanger event monsters settings via
-//~~ MonsterList.xml, use multipliers below. All values for
-//~~ the above defined indexes are set to 1 in MonsterList.xml
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ### DoppelGanger::Schedule::Time ###
+//	NotifyHour: Event notification hour, 0-23
+//	NotifyMinute: Event notification minute hour, 0-59
+//	ReadyHour: Event ready  hour, 0-23
+//	ReadyMinute: Event ready minute hour, 0-59
+//	StartHour:  Event start hour, 0-23
+//	StartMinute: Event start minute hour, 0-59
+//
+### DoppelGanger::EntryLevel::Room ###
+//	Number: Level of the event the the configuration applies to
+//	MinLevel: Minimum level of player to allow entry to specified event level
+//	MaxLevel: Maximum level of player to allow entry to specified event level
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ If MAX is used as value for MaxLevel attribute then the attribute is being set to sum of MaxNormalLevel and MaxMasterLevel from Common.ini
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ### DoppelGanger::Room ###
+//	Number: Number of event level, 0-6
+//	RewardExp: Reward exp for the event winner, max 2147483647
+// ### DoppelGanger::Room::Monster ###
+//	LevelMultiplier: Multiplier of monster level, float
+//	HPMultiplier: Multiplier of monster HP, float
+//	DamageMultiplier: Multiplier of monster damage, float
+//	DefenseMultiplier: Multiplier of monster defense, float
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Above multipliers apply to monster indexes: 529-539
+//~~ Do not modify DoppelGanger event monsters attributes in MonsterList.xml, use multipliers above
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ### DoppelGanger::Room::InterimChest ###
+//	SuccessRate: Chance rate of getting item rate from Interim Chest, otherwise Larva monsters will be spawned, n/10000
+//
+// ### DoppelGanger::Room::InterimChest|FinalChest::Chest ###
+//	Number: Unique number of Interim (1-3) and Final (1-6) reward chests 
+//	EventBagID: Event Item Bag ID assigned to the chest, see ItembagsScript.lua
+//	BagUseCount: Number of times the event bag will be executed
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Depending on item bag configuration, the bag may reward more than 1 item even BagUseCount is set to 1
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+//	Rate: Chance rate of selecting specific item bag for reward
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ The total value of the 'Rate' attribute for each chest type must equal 1000000. Rates should be configured in descending order, from highest to lowest.
+//~~ The actual chance of obtaining an item is configured directly through the assigned item bag.
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //
 // STRICTLY NO COMMENTS INSIDE TAGS
 -->
@@ -62,114 +103,114 @@
 
 	<Room Number="0" RewardExp="60000">
 		<Monster LevelMultiplier="2.2" HPMultiplier="4.1" DamageMultiplier="1.43" DefenseMultiplier="1.8" />
-		<InterimChest ItemDropCount="1">
-			<Chest Number="1" SectionID="9" RewardRate="1000000" />
-			<Chest Number="2" SectionID="10" RewardRate="1000000" />
-			<Chest Number="3" SectionID="11" RewardRate="100000" />
+		<InterimChest SuccessRate="400">
+			<Chest Number="1" EventBagID="1200" BagUseCount="1" Rate="476192" />
+			<Chest Number="2" EventBagID="1201" BagUseCount="1" Rate="476188" />
+			<Chest Number="3" EventBagID="1202" BagUseCount="1" Rate="47620" />
 		</InterimChest>
-		<FinalChest ItemDropCount="5">
-			<Chest Number="1" SectionID="1" RewardRate="600000" />
-			<Chest Number="2" SectionID="5" RewardRate="600000" />
-			<Chest Number="3" SectionID="10" RewardRate="100000" />
-			<Chest Number="4" SectionID="11" RewardRate="1000" />
-			<Chest Number="5" SectionID="12" RewardRate="100" />
-			<Chest Number="6" SectionID="13" RewardRate="10" />
+		<FinalChest>
+			<Chest Number="1" EventBagID="1203" BagUseCount="1" Rate="461145" />
+			<Chest Number="2" EventBagID="1204" BagUseCount="1" Rate="461144" />
+			<Chest Number="3" EventBagID="1205" BagUseCount="2" Rate="76857" />
+			<Chest Number="4" EventBagID="1206" BagUseCount="3" Rate="770" />
+			<Chest Number="5" EventBagID="1207" BagUseCount="4" Rate="77" />
+			<Chest Number="6" EventBagID="1208" BagUseCount="5" Rate="7" />
 		</FinalChest>
 	</Room>
 	<Room Number="1" RewardExp="100000">
 		<Monster LevelMultiplier="3.93" HPMultiplier="13.2" DamageMultiplier="3.91" DefenseMultiplier="4.65" />
-		<InterimChest ItemDropCount="1">
-			<Chest Number="1" SectionID="9" RewardRate="1000000" />
-			<Chest Number="2" SectionID="10" RewardRate="1000000" />
-			<Chest Number="3" SectionID="11" RewardRate="100000" />
+		<InterimChest SuccessRate="400">
+			<Chest Number="1" EventBagID="1200" BagUseCount="1" Rate="476192" />
+			<Chest Number="2" EventBagID="1201" BagUseCount="1" Rate="476188" />
+			<Chest Number="3" EventBagID="1202" BagUseCount="1" Rate="47620" />
 		</InterimChest>
-		<FinalChest ItemDropCount="5">
-			<Chest Number="1" SectionID="2" RewardRate="600000" />
-			<Chest Number="2" SectionID="6" RewardRate="600000" />
-			<Chest Number="3" SectionID="11" RewardRate="100000" />
-			<Chest Number="4" SectionID="11" RewardRate="1000" />
-			<Chest Number="5" SectionID="12" RewardRate="100" />
-			<Chest Number="6" SectionID="13" RewardRate="10" />
+		<FinalChest>
+			<Chest Number="1" EventBagID="1203" BagUseCount="1" Rate="461145" />
+			<Chest Number="2" EventBagID="1204" BagUseCount="1" Rate="461144" />
+			<Chest Number="3" EventBagID="1205" BagUseCount="2" Rate="76857" />
+			<Chest Number="4" EventBagID="1206" BagUseCount="3" Rate="770" />
+			<Chest Number="5" EventBagID="1207" BagUseCount="4" Rate="77" />
+			<Chest Number="6" EventBagID="1208" BagUseCount="5" Rate="7" />
 		</FinalChest>
 	</Room>
 	<Room Number="2" RewardExp="130000">
 		<Monster LevelMultiplier="5.25" HPMultiplier="22.8" DamageMultiplier="5.68" DefenseMultiplier="8" />
-		<InterimChest ItemDropCount="1">
-			<Chest Number="1" SectionID="9" RewardRate="1000000" />
-			<Chest Number="2" SectionID="10" RewardRate="1000000" />
-			<Chest Number="3" SectionID="11" RewardRate="100000" />
+		<InterimChest SuccessRate="400">
+			<Chest Number="1" EventBagID="1200" BagUseCount="1" Rate="476192" />
+			<Chest Number="2" EventBagID="1201" BagUseCount="1" Rate="476188" />
+			<Chest Number="3" EventBagID="1202" BagUseCount="1" Rate="47620" />
 		</InterimChest>
-		<FinalChest ItemDropCount="6">
-			<Chest Number="1" SectionID="3" RewardRate="600000" />
-			<Chest Number="2" SectionID="7" RewardRate="600000" />
-			<Chest Number="3" SectionID="10" RewardRate="100000" />
-			<Chest Number="4" SectionID="11" RewardRate="1000" />
-			<Chest Number="5" SectionID="12" RewardRate="100" />
-			<Chest Number="6" SectionID="13" RewardRate="10" />
+		<FinalChest>
+			<Chest Number="1" EventBagID="1203" BagUseCount="2" Rate="461145" />
+			<Chest Number="2" EventBagID="1204" BagUseCount="2" Rate="461144" />
+			<Chest Number="3" EventBagID="1205" BagUseCount="3" Rate="76857" />
+			<Chest Number="4" EventBagID="1206" BagUseCount="4" Rate="770" />
+			<Chest Number="5" EventBagID="1207" BagUseCount="4" Rate="77" />
+			<Chest Number="6" EventBagID="1208" BagUseCount="5" Rate="7" />
 		</FinalChest>
 	</Room>
 	<Room Number="3" RewardExp="160000">
 		<Monster LevelMultiplier="5.65" HPMultiplier="31.8" DamageMultiplier="7.38" DefenseMultiplier="9.8" />
-		<InterimChest ItemDropCount="1">
-			<Chest Number="1" SectionID="9" RewardRate="1000000" />
-			<Chest Number="2" SectionID="10" RewardRate="1000000" />
-			<Chest Number="3" SectionID="11" RewardRate="100000" />
+		<InterimChest SuccessRate="400">
+			<Chest Number="1" EventBagID="1200" BagUseCount="1" Rate="476192" />
+			<Chest Number="2" EventBagID="1201" BagUseCount="1" Rate="476188" />
+			<Chest Number="3" EventBagID="1202" BagUseCount="1" Rate="47620" />
 		</InterimChest>
-		<FinalChest ItemDropCount="6">
-			<Chest Number="1" SectionID="4" RewardRate="600000" />
-			<Chest Number="2" SectionID="8" RewardRate="600000" />
-			<Chest Number="3" SectionID="10" RewardRate="100000" />
-			<Chest Number="4" SectionID="11" RewardRate="1000" />
-			<Chest Number="5" SectionID="12" RewardRate="100" />
-			<Chest Number="6" SectionID="13" RewardRate="10" />
+		<FinalChest>
+			<Chest Number="1" EventBagID="1203" BagUseCount="2" Rate="461145" />
+			<Chest Number="2" EventBagID="1204" BagUseCount="2" Rate="461144" />
+			<Chest Number="3" EventBagID="1205" BagUseCount="3" Rate="76857" />
+			<Chest Number="4" EventBagID="1206" BagUseCount="4" Rate="770" />
+			<Chest Number="5" EventBagID="1207" BagUseCount="4" Rate="77" />
+			<Chest Number="6" EventBagID="1208" BagUseCount="5" Rate="7" />
 		</FinalChest>
 	</Room>
 	<Room Number="4" RewardExp="190000">
-		<Monster LevelMultiplier="6.79" HPMultiplier="38" DamageMultiplier="8.48" DefenseMultiplier="11.6" />
-		<InterimChest ItemDropCount="1">
-			<Chest Number="1" SectionID="12" RewardRate="1000000" />
-			<Chest Number="2" SectionID="13" RewardRate="1000000" />
-			<Chest Number="3" SectionID="14" RewardRate="100000" />
+		<Monster LevelMultiplier="6.79" HPMultiplier="38.0" DamageMultiplier="8.48" DefenseMultiplier="11.6" />
+		<InterimChest SuccessRate="400">
+			<Chest Number="1" EventBagID="1200" BagUseCount="1" Rate="476192" />
+			<Chest Number="2" EventBagID="1201" BagUseCount="1" Rate="476188" />
+			<Chest Number="3" EventBagID="1202" BagUseCount="1" Rate="47620" />
 		</InterimChest>
-		<FinalChest ItemDropCount="7">
-			<Chest Number="1" SectionID="4" RewardRate="600000" />
-			<Chest Number="2" SectionID="8" RewardRate="600000" />
-			<Chest Number="3" SectionID="13" RewardRate="100000" />
-			<Chest Number="4" SectionID="14" RewardRate="1000" />
-			<Chest Number="5" SectionID="13" RewardRate="100" />
-			<Chest Number="6" SectionID="14" RewardRate="10" />
+		<FinalChest>
+			<Chest Number="1" EventBagID="1203" BagUseCount="3" Rate="461145" />
+			<Chest Number="2" EventBagID="1204" BagUseCount="3" Rate="461144" />
+			<Chest Number="3" EventBagID="1205" BagUseCount="3" Rate="76857" />
+			<Chest Number="4" EventBagID="1206" BagUseCount="4" Rate="770" />
+			<Chest Number="5" EventBagID="1207" BagUseCount="4" Rate="77" />
+			<Chest Number="6" EventBagID="1208" BagUseCount="5" Rate="7" />
 		</FinalChest>
 	</Room>
 	<Room Number="5" RewardExp="210000">
-		<Monster LevelMultiplier="6.79" HPMultiplier="49" DamageMultiplier="11.38" DefenseMultiplier="16.7" />
-		<InterimChest ItemDropCount="1">
-			<Chest Number="1" SectionID="9" RewardRate="1000000" />
-			<Chest Number="2" SectionID="10" RewardRate="1000000" />
-			<Chest Number="3" SectionID="11" RewardRate="100000" />
+		<Monster LevelMultiplier="6.79" HPMultiplier="49.0" DamageMultiplier="11.38" DefenseMultiplier="16.7" />
+		<InterimChest SuccessRate="400">
+			<Chest Number="1" EventBagID="1200" BagUseCount="1" Rate="476192" />
+			<Chest Number="2" EventBagID="1201" BagUseCount="1" Rate="476188" />
+			<Chest Number="3" EventBagID="1202" BagUseCount="1" Rate="47620" />
 		</InterimChest>
-		<FinalChest ItemDropCount="7">
-			<Chest Number="1" SectionID="4" RewardRate="600000" />
-			<Chest Number="2" SectionID="8" RewardRate="600000" />
-			<Chest Number="3" SectionID="10" RewardRate="100000" />
-			<Chest Number="4" SectionID="11" RewardRate="1000" />
-			<Chest Number="5" SectionID="12" RewardRate="100" />
-			<Chest Number="6" SectionID="13" RewardRate="10" />
+		<FinalChest>
+			<Chest Number="1" EventBagID="1203" BagUseCount="3" Rate="461145" />
+			<Chest Number="2" EventBagID="1204" BagUseCount="3" Rate="461144" />
+			<Chest Number="3" EventBagID="1205" BagUseCount="3" Rate="76857" />
+			<Chest Number="4" EventBagID="1206" BagUseCount="4" Rate="770" />
+			<Chest Number="5" EventBagID="1207" BagUseCount="4" Rate="77" />
+			<Chest Number="6" EventBagID="1208" BagUseCount="5" Rate="7" />
 		</FinalChest>
 	</Room>
 	<Room Number="6" RewardExp="240000">
-		<Monster LevelMultiplier="6.79" HPMultiplier="59" DamageMultiplier="13.82" DefenseMultiplier="21.2" />
-		<InterimChest ItemDropCount="1">
-			<Chest Number="1" SectionID="9" RewardRate="1000000" />
-			<Chest Number="2" SectionID="10" RewardRate="1000000" />
-			<Chest Number="3" SectionID="11" RewardRate="100000" />
+		<Monster LevelMultiplier="6.79" HPMultiplier="59.0" DamageMultiplier="13.82" DefenseMultiplier="21.2" />
+		<InterimChest SuccessRate="400">
+			<Chest Number="1" EventBagID="1200" BagUseCount="1" Rate="476192" />
+			<Chest Number="2" EventBagID="1201" BagUseCount="1" Rate="476188" />
+			<Chest Number="3" EventBagID="1202" BagUseCount="1" Rate="47620" />
 		</InterimChest>
-		<FinalChest ItemDropCount="7">
-			<Chest Number="1" SectionID="4" RewardRate="600000" />
-			<Chest Number="2" SectionID="8" RewardRate="600000" />
-			<Chest Number="3" SectionID="10" RewardRate="100000" />
-			<Chest Number="4" SectionID="11" RewardRate="1000" />
-			<Chest Number="5" SectionID="12" RewardRate="100" />
-			<Chest Number="6" SectionID="13" RewardRate="10" />
+		<FinalChest>
+			<Chest Number="1" EventBagID="1203" BagUseCount="3" Rate="461145" />
+			<Chest Number="2" EventBagID="1204" BagUseCount="3" Rate="461144" />
+			<Chest Number="3" EventBagID="1205" BagUseCount="4" Rate="76857" />
+			<Chest Number="4" EventBagID="1206" BagUseCount="4" Rate="770" />
+			<Chest Number="5" EventBagID="1207" BagUseCount="5" Rate="77" />
+			<Chest Number="6" EventBagID="1208" BagUseCount="5" Rate="7" />
 		</FinalChest>
 	</Room>
 </DoppelGanger>

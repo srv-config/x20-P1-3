@@ -1450,7 +1450,7 @@ end
 -- SkillID: 861, Reflection Barrier Strengthener
 function LightWizardReflectionBarrier_MasterLevel1_Calc(Level, MasterLevel, Strength, Dexterity, Vitality, Energy, SkillTreeValue)
 	local ReflectProbability = 50
-	local ReflectShockDmgPercentage = 15 + SkillTreeValue
+	local ReflectShockDmgPercentage = 50 + SkillTreeValue
 	local Duration = 60
 	return ReflectProbability, ReflectShockDmgPercentage, Duration
 end
@@ -1458,7 +1458,7 @@ end
 -- SkillID: 862, Reflection Barrier Skills
 function LightWizardReflectionBarrier_MasterLevel2_Calc(Level, MasterLevel, Strength, Dexterity, Vitality, Energy, SkillTreeValue, SkillTreeValue2)
 	local ReflectProbability = 50
-	local ReflectShockDmgPercentage = 15 + SkillTreeValue
+	local ReflectShockDmgPercentage = 50 + SkillTreeValue
 	local Duration = 60 + SkillTreeValue2
 	return ReflectProbability, ReflectShockDmgPercentage, Duration
 end
@@ -1466,7 +1466,7 @@ end
 -- SkillID: 863, Reflection Barrier Mastery
 function LightWizardReflectionBarrier_MasterLevel3_Calc(Level, MasterLevel, Strength, Dexterity, Vitality, Energy, SkillTreeValue, SkillTreeValue2)
 	local ReflectProbability = 50
-	local ReflectShockDmgPercentage = 15 + SkillTreeValue
+	local ReflectShockDmgPercentage = 50 + SkillTreeValue
 	local Duration = 60 + SkillTreeValue2
 	return ReflectProbability, ReflectShockDmgPercentage, Duration
 end

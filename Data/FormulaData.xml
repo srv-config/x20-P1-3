@@ -63,15 +63,19 @@
 //		~ 55: Defense bonus value when wearing five pieces legendary set of level 14 or higher
 //		~ 56: Defense bonus value when wearing five pieces legendary set of level 15 or higher
 //		~ 57: Legendary weapon Attack Rate increase for items of level below level 10
-//		~ 58: Legendary weapon Attack Rate increase for items equal or above level 10
+//		~ 58: Legendary weapon Attack Rate bonus added to result of formula 57 for items equal or above level 10
 //		~ 59: Legendary weapon min/max damage increase for items of level below level 10
-//		~ 60: Legendary weapon min/max damage increase for items equal or above level 10
+//		~ 60: Legendary weapon min/max damage bonus added to result of formula 59 for items equal or above level 10
 //		~ 61: Legendary Curse/Wizardry damage increase for items of level below level 10
-//		~ 62: Legendary Curse/Wizardry damage increase for items equal or above level 10
+//		~ 62: Legendary Curse/Wizardry damage bonus added to result of formula 61 for items equal or above level 10
 //		~ 63: Legendary set item defense value added per level for item below level 10
-//		~ 64: Legendary set item defense value added per level for item equal or above level 10
-//		~ 69: Legendary excellent item defense added per level for item below level 10
-//		~ 70: Legendary excellent item defense added per level for item equal or above level 10
+//		~ 64: Legendary set item defense bonus value added per level to result of formula 63 for item equal or above level 10
+//		~ 65: Legendary shield defense increase for items of level below level 10
+//		~ 66: Legendary shield defense bonus added to result of formula 65 for items equal or above level 10
+//		~ 67: Legendary shield defense success rate increase for items of level below level 10
+//		~ 68: Legendary shield defense success rate bonus added to result of formula 67 for items equal or above level 10
+//		~ 69: Legendary excellent item defense value added per level for item below level 10
+//		~ 70: Legendary excellent item defense bonus value added per level to result of formula 69 for item equal or above level 10
 //		~ 71: Legendary excellent item base defense value at level 0
 //		~ 72: Legendary set item base defense value at level 0
 //

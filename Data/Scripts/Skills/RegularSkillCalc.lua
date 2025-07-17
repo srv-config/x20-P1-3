@@ -1240,6 +1240,8 @@ function BatFlockDotDamage(InDamage, DOT, Strength, Dexterity, Vitality, Energy,
 	elseif (TargetType == TARGET_TYPE_MONSTER) then
 		OutDamage = InDamage
 	end
+	
+	return OutDamage
 end
 
 -- SkillID: 294, Pierce Attack
@@ -1426,7 +1428,7 @@ end
 -- SkillID: 244, Reflection Barrier
 function LightWizardReflectionBarrierCalc(Level, MasterLevel, Strength, Dexterity, Vitality, Energy)
 	local ReflectProbability = 50
-	local ReflectShockDmgPercentage = 15
+	local ReflectShockDmgPercentage = 50
 	local Duration = 60
 	return ReflectProbability, ReflectShockDmgPercentage, Duration
 end
