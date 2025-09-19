@@ -40,9 +40,8 @@
 	EVENTBAG_WARRIORRING_1 = 19
 	EVENTBAG_WARRIORRING_2 = 20
 	EVENTBAG_CHERRYBLOSSOM_GOLD = 21
-	EVENTBAG_LUCKYCOIN10 = 22
-	EVENTBAG_LUCKYCOIN20 = 23
-	EVENTBAG_LUCKYCOIN30 = 24
+	EVENTBAG_LUCKYCOIN = 22
+-- 23 - 24
 	EVENTBAG_LORDMIX = 25
 	EVENTBAG_KUNDUN = 26
 	EVENTBAG_ACHERONGUARDIAN = 27
@@ -402,9 +401,8 @@ function LoadItemBag() -- Bags Load
 	AddItemBag(BAG_EVENT, 18,0, 'NPC_SantaClause(3)_Reward') -- DropFunction /3/
 	AddItemBag(BAG_EVENT, 19,0, 'Item_WarriorRing(40)_Reward') -- DropFunction /3/
 	AddItemBag(BAG_EVENT, 20,0, 'Item_WarriorRing(80)_Reward') -- DropFunction /3/
-	AddItemBag(BAG_EVENT, 22,0, 'Mix_LuckyCoin(10)_Reward') -- DropFunction /4/
-	AddItemBag(BAG_EVENT, 23,0, 'Mix_LuckyCoin(20)_Reward') -- DropFunction /4/
-	AddItemBag(BAG_EVENT, 24,0, 'Mix_LuckyCoin(30)_Reward') -- DropFunction /4/
+	AddItemBag(BAG_EVENT, 22,0, 'Event_LuckyCoin_Reward') -- DropFunction /4/
+-- 23 ~ 24
 	AddItemBag(BAG_EVENT, 25,0, 'Mix_Senior_Reward') -- DropFunction /4/
 	AddItemBag(BAG_EVENT, 26,0, 'Monster_(275)_Kundun') -- DropFunction /3/
 	AddItemBag(BAG_EVENT, 27,0, 'Event_AcheronGuardian_Reward') -- DropFunction /3/
@@ -437,7 +435,7 @@ function LoadItemBag() -- Bags Load
 	AddItemBag(BAG_EVENT, 56,0, 'Monster_(734)_Lord_of_Ferea') -- DropFunction /3/
 	AddItemBag(BAG_EVENT, 57,0, 'Monster_(746)_Knicks') -- DropFunction /3/
 	AddItemBag(BAG_EVENT, 58,0, 'Monster_(794)_God_of_Darkness') -- DropFunction /3/
--- 59 - 69
+-- 59 ~ 69
 	AddItemBag(BAG_EVENT, 70,0, 'Event_CW_Elf_Altar') -- DropFunction /3/
 	AddItemBag(BAG_EVENT, 71,0, 'Event_CW_Hero_List') -- DropFunction /3/
 	AddItemBag(BAG_EVENT, 72,0, 'Item_(14,460,0)_[Lvl1]_Monster_Soul_Converter') -- DropFunction /3/
@@ -445,32 +443,39 @@ function LoadItemBag() -- Bags Load
 	AddItemBag(BAG_EVENT, 74,0, 'Item_(14,462,0)_[Lvl3]_Monster_Soul_Converter') -- DropFunction /3/
 	AddItemBag(BAG_EVENT, 75,0, 'Item_(14,463,0)_[Lvl4]_Monster_Soul_Converter') -- DropFunction /3/
 	AddItemBag(BAG_EVENT, 76,0, 'Item_(14,464,0)_[Lvl5]_Monster_Soul_Converter') -- DropFunction /3/
--- 77 - 79 IWC
+-- 77 ~ 79 IWC
 	AddItemBag(BAG_EVENT, 80,0, 'Event_IllusionTemple_League_Match_Win') -- DropFunction /3/
 	AddItemBag(BAG_EVENT, 81,0, 'Event_IllusionTemple_League_Tournament_Win') -- DropFunction /3/
 	AddItemBag(BAG_EVENT, 82,0, 'Mix_Maple_Leaf_Reward') -- DropFunction /4/
+
 -- Bags for purpose of Cherry Blossom Mix System
 	AddItemBag(BAG_EVENT, 13,0, 'Mix_Cherry_Blossom_Red_Reward') -- DropFunction /4/
 	AddItemBag(BAG_EVENT, 21,0, 'Mix_Cherry_Blossom_Gold_Reward') -- DropFunction /4/
 	AddItemBag(BAG_EVENT, 47,0, 'Mix_Cherry_Blossom_White_Reward') -- DropFunction /4/
 	AddItemBag(BAG_EVENT, 48,0, 'Mix_Cherry_Blossom_Red_Reward') -- DropFunction /4/
+
 -- Bags for purpose of Monster Group Regen System
 	AddItemBag(BAG_EVENT, 150,0, 'Event_Monster_(561)_Medusa') -- DropFunction /3/ used when OverriteDefaultSettings from MonsterGroupRegen.xml is set to 1
 	AddItemBag(BAG_EVENT, 151,0, 'Event_Monster_(560)_Sapi_Queen') -- DropFunction /3/ used when OverriteDefaultSettings from MonsterGroupRegen.xml is set to 1
+
 -- Ice Wind Castle Event
 	AddItemBag(BAG_EVENT, 77,0, 'Event_IWC_GuildMaster') -- DropFunction /3/
 	AddItemBag(BAG_EVENT, 78,0, 'Event_IWC_GuildMember') -- DropFunction /3/
 	AddItemBag(BAG_EVENT, 79,0, 'Event_IWC_Player') -- DropFunction /3/
+
 -- Bags for purpose of Reset System
 	AddItemBag(BAG_EVENT, 300,0, 'ResetSystem_Regular')
 	AddItemBag(BAG_EVENT, 301,0, 'ResetSystem_Milestone')
+
 -- Bags for purpose of Scramble Word event
 	AddItemBag(BAG_EVENT, 400,0, 'Event_ScrambleWord_Level_1')
 	AddItemBag(BAG_EVENT, 401,0, 'Event_ScrambleWord_Level_2')
+
 -- Bags for purpose of Hide and Seek event
 	AddItemBag(BAG_EVENT, 500,0, 'Event_HideAndSeek_Round_1')
 	AddItemBag(BAG_EVENT, 501,0, 'Event_HideAndSeek_Round_2')
 	AddItemBag(BAG_EVENT, 502,0, 'Event_HideAndSeek_Round_3')
+
 -- Bags for purpose of Raffle event
 	AddItemBag(BAG_EVENT, 600,0, 'Event_Raffle_Winner')
 	AddItemBag(BAG_EVENT, 601,0, 'Event_Raffle_Lotto_3')
@@ -479,8 +484,10 @@ function LoadItemBag() -- Bags Load
 	AddItemBag(BAG_EVENT, 611,0, 'Event_Raffle_HitOrder_3')
 	AddItemBag(BAG_EVENT, 612,0, 'Event_Raffle_HitOrder_2')
 	AddItemBag(BAG_EVENT, 613,0, 'Event_Raffle_HitOrder_1')
+
 -- Bags for purpose of Imperial Guardian Event
 	AddItemBag(BAG_EVENT, 700,0, 'Event_ImperialGuardian(1)_Reward')
+
 -- Bags for purpose of Play Time event
 	AddItemBag(BAG_EVENT, 800,0, 'Event_PlayTime_Round_1')
 	AddItemBag(BAG_EVENT, 801,0, 'Event_PlayTime_Round_2')
@@ -492,13 +499,17 @@ function LoadItemBag() -- Bags Load
 	AddItemBag(BAG_EVENT, 807,0, 'Event_PlayTime_Round_8')
 	AddItemBag(BAG_EVENT, 808,0, 'Event_PlayTime_Round_9')
 	AddItemBag(BAG_EVENT, 809,0, 'Event_PlayTime_Round_10')
+
 -- Bags for purpose of Imperial Guardian additional rewards
 	AddItemBag(BAG_EVENT, 850,0, 'Event_ImperialGuardian_Level(1)_Additional_Reward')
+
 -- Bags for purpose of Blessing Box event
 	AddItemBag(BAG_EVENT, 900,0, 'Event_BlessingBox_(899)_Kill')
+
 -- Bags for purpose of Last Man Standing event
 	AddItemBag(BAG_EVENT, 1000,0, 'Event_LastManStanding_Looser_Reward') -- DropFunction /3/
 	AddItemBag(BAG_EVENT, 1050,0, 'Event_LastManStanding_Winner_Reward') -- DropFunction /3/
+	
 -- Bags for purpose of DoppelGanger event
 	AddItemBag(BAG_EVENT, 1200,0, 'Event_DoppelGanger_InterimChest_1') -- DropFunction /3/
 	AddItemBag(BAG_EVENT, 1201,0, 'Event_DoppelGanger_InterimChest_2') -- DropFunction /3/
@@ -509,6 +520,43 @@ function LoadItemBag() -- Bags Load
 	AddItemBag(BAG_EVENT, 1206,0, 'Event_DoppelGanger_FinalChest_4') -- DropFunction /3/
 	AddItemBag(BAG_EVENT, 1207,0, 'Event_DoppelGanger_FinalChest_5') -- DropFunction /3/
 	AddItemBag(BAG_EVENT, 1208,0, 'Event_DoppelGanger_FinalChest_6') -- DropFunction /3/
+	
+-- Bags for purpose of Daily Rewards event plugin
+	AddItemBag(BAG_EVENT, 1300,0, 'DailyRewards\\Event_DailyRewards_Day_1') -- DropFunction /3/
+	AddItemBag(BAG_EVENT, 1301,0, 'DailyRewards\\Event_DailyRewards_Day_2') -- DropFunction /3/
+	AddItemBag(BAG_EVENT, 1302,0, 'DailyRewards\\Event_DailyRewards_Day_3') -- DropFunction /3/
+	AddItemBag(BAG_EVENT, 1303,0, 'DailyRewards\\Event_DailyRewards_Day_4') -- DropFunction /3/
+	AddItemBag(BAG_EVENT, 1304,0, 'DailyRewards\\Event_DailyRewards_Day_5') -- DropFunction /3/
+	AddItemBag(BAG_EVENT, 1305,0, 'DailyRewards\\Event_DailyRewards_Day_6') -- DropFunction /3/
+	AddItemBag(BAG_EVENT, 1306,0, 'DailyRewards\\Event_DailyRewards_Day_7') -- DropFunction /3/
+	AddItemBag(BAG_EVENT, 1307,0, 'DailyRewards\\Event_DailyRewards_Day_8') -- DropFunction /3/
+	AddItemBag(BAG_EVENT, 1308,0, 'DailyRewards\\Event_DailyRewards_Day_9') -- DropFunction /3/
+	AddItemBag(BAG_EVENT, 1309,0, 'DailyRewards\\Event_DailyRewards_Day_10') -- DropFunction /3/
+	AddItemBag(BAG_EVENT, 1310,0, 'DailyRewards\\Event_DailyRewards_Day_11') -- DropFunction /3/
+	AddItemBag(BAG_EVENT, 1311,0, 'DailyRewards\\Event_DailyRewards_Day_12') -- DropFunction /3/
+	AddItemBag(BAG_EVENT, 1312,0, 'DailyRewards\\Event_DailyRewards_Day_13') -- DropFunction /3/
+	AddItemBag(BAG_EVENT, 1313,0, 'DailyRewards\\Event_DailyRewards_Day_14') -- DropFunction /3/
+	AddItemBag(BAG_EVENT, 1314,0, 'DailyRewards\\Event_DailyRewards_Day_15') -- DropFunction /3/
+	AddItemBag(BAG_EVENT, 1315,0, 'DailyRewards\\Event_DailyRewards_Day_16') -- DropFunction /3/
+	AddItemBag(BAG_EVENT, 1316,0, 'DailyRewards\\Event_DailyRewards_Day_17') -- DropFunction /3/
+	AddItemBag(BAG_EVENT, 1317,0, 'DailyRewards\\Event_DailyRewards_Day_18') -- DropFunction /3/
+	AddItemBag(BAG_EVENT, 1318,0, 'DailyRewards\\Event_DailyRewards_Day_19') -- DropFunction /3/
+	AddItemBag(BAG_EVENT, 1319,0, 'DailyRewards\\Event_DailyRewards_Day_20') -- DropFunction /3/
+	AddItemBag(BAG_EVENT, 1320,0, 'DailyRewards\\Event_DailyRewards_Day_21') -- DropFunction /3/
+	AddItemBag(BAG_EVENT, 1321,0, 'DailyRewards\\Event_DailyRewards_Day_22') -- DropFunction /3/
+	AddItemBag(BAG_EVENT, 1322,0, 'DailyRewards\\Event_DailyRewards_Day_23') -- DropFunction /3/
+	AddItemBag(BAG_EVENT, 1323,0, 'DailyRewards\\Event_DailyRewards_Day_24') -- DropFunction /3/
+	AddItemBag(BAG_EVENT, 1324,0, 'DailyRewards\\Event_DailyRewards_Day_25') -- DropFunction /3/
+	AddItemBag(BAG_EVENT, 1325,0, 'DailyRewards\\Event_DailyRewards_Day_26') -- DropFunction /3/
+	AddItemBag(BAG_EVENT, 1326,0, 'DailyRewards\\Event_DailyRewards_Day_27') -- DropFunction /3/
+	AddItemBag(BAG_EVENT, 1327,0, 'DailyRewards\\Event_DailyRewards_Day_28') -- DropFunction /3/
+	AddItemBag(BAG_EVENT, 1328,0, 'DailyRewards\\Event_DailyRewards_Day_29') -- DropFunction /3/
+	AddItemBag(BAG_EVENT, 1329,0, 'DailyRewards\\Event_DailyRewards_Day_30') -- DropFunction /3/
+	AddItemBag(BAG_EVENT, 1330,0, 'DailyRewards\\Event_DailyRewards_Day_31') -- DropFunction /3/
+	AddItemBag(BAG_EVENT, 1331,0, 'DailyRewards\\Event_DailyRewards_Week_1') -- DropFunction /3/
+	AddItemBag(BAG_EVENT, 1332,0, 'DailyRewards\\Event_DailyRewards_Week_2') -- DropFunction /3/
+	AddItemBag(BAG_EVENT, 1333,0, 'DailyRewards\\Event_DailyRewards_Week_3') -- DropFunction /3/
+	AddItemBag(BAG_EVENT, 1334,0, 'DailyRewards\\Event_DailyRewards_Week_4') -- DropFunction /3/
 end
 
 -- ### /1/ Drop Item (using Item Bag Structure) ### --
